@@ -1,16 +1,24 @@
 //Colors
 $black: #000;
 $white: #fff;
-$bg-light: #d7e9f7;
-$bg-regular: #219bd8;
-$bg-heavy: #0a6297;
+$color-light-blue: #d7e9f7;
+$color-regular-blue: #219bd8;
+$color-heavy-blue: #0a6297;
+$color-light-green: #badb8f;
+$color-regular-green: #a1ce5c;
 
 //Fonts
 $font-openSans-regular: 'Open Sans', 'Arial', sans-serif;
 $font-openSans-semi: 'Open Sans - Semibold', 'Arial', sans-serif;
 
 //Mixins
-$mixin pseudo {
+@mixin mix-pseudo {
+  position: absolute;
+  content: '';
+  display: block;
+}
+
+@mixin mix-pseudo-test {
   position: absolute;
   content: '';
   display: block;

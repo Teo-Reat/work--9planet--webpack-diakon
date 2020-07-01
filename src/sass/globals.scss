@@ -1,0 +1,21 @@
+body {
+  font-family: $font-openSans-regular;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

@@ -1,0 +1,196 @@
+//Header
+.header {
+  min-height: 59px;
+  padding: 0 10px;
+}
+
+.header__wrapper {
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.header__logo {
+  min-height: 24px;
+  min-width: 90px;
+  margin-top: 17px;
+  margin-right: 40px;
+}
+
+.header__user {
+  height: 18px;
+  width: 18px;
+  fill: $black;
+}
+
+.header__search {
+  width: 18px;
+  height: 18px;
+  fill: $black;
+}
+
+.header__language {
+  &__item {
+    display: inline-block;
+    position: relative;
+    padding-right: 21px;
+    text-transform: uppercase;
+    &::before {
+      position: absolute;
+      content: url("../assets/images/svg/arrow_down.svg");
+      display: block;
+      top: 0;
+      right: 0;
+      width: 13px;
+      height: 7px;
+    }
+  }
+}
+
+.header__menu {
+  &__btn {
+    height: 22px;
+    width: 22px;
+    display: block;
+    position: relative;
+    &::after {
+      content: '';
+      width: 22px;
+      height: 2px;
+      background: $black;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      box-shadow: 0 10px $black, 0 20px $black;
+    }
+  }
+}
+
+//Main__Prime
+.prime {
+  &__slider {
+    position: relative;
+  }
+  &__first,
+  &__second,
+  &__third {
+    background: $color-heavy-blue url("../assets/images/bg-prime-1.png") center center;
+    background-size: cover;
+    min-height: 499px;
+    padding: 0 10px;
+    &__new {
+      padding: 5px 10px 8px;
+      background: $color-regular-green;
+      margin-top: 49px;
+    }
+    &__title {
+      margin-top: 23px;
+      font-family: $font-openSans-regular;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 34px;
+    }
+    &__description {
+      margin-top: 23px;
+      font-family: $font-openSans-regular;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  &__second {
+    background: $color-heavy-blue url("../assets/images/bg-prime-2.png") center center;
+  }
+
+  &__third {
+    background: $color-heavy-blue url("../assets/images/bg-prime-1.png") right center;
+  }
+
+  & .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    & button {
+      border: 1px solid $white;
+      width: 37px;
+      height: 7px;
+      background: transparent;
+      margin: 0 6px;
+    }
+    & > .slick-active > button {
+      background: $white;
+    }
+  }
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+//Main__Products
+.products {
+  padding: 0 10px;
+  text-align: center;
+  &__title {
+    font-family: $font-openSans-semi;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 48px;
+    width: 100%;
+    margin-top: 45px;
+  }
+  &__wrapper {
+    margin-bottom: 63px;
+  }
+  &__item {
+    margin-top: 30px;
+  }
+}
+
+//Main__News
+.news {
+  background: $color-light-blue;
+  padding: 70px 10px 0;
+  &__item {
+
+  }
+  .news__item__billet {
+    text-transform: uppercase;
+    font-family: $font-openSans-regular;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 50.67px;
+    color: #040404;
+    letter-spacing: 2.08px;
+    display: inline-block;
+    padding: 0 17px;
+  }
+  &__company {
+    background: $color-heavy-blue url("../assets/images/urology.jpg") center center;
+    & .news__item__billet {
+      background: $color-light-blue;
+    }
+  }
+  &__industry {
+
+  }
+  &__events {
+    background: $color-heavy-blue url("../assets/images/atm.jpg") center center;
+  }
+  &__webinars {
+    background: $color-heavy-blue url("../assets/images/cystatin.jpg") center center;
+  }
+  &__actions {
+    background: $color-heavy-blue url("../assets/images/pronadisa.jpg") center center;
+  }
+}
