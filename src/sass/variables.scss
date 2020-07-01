@@ -1,0 +1,22 @@
+//Colors
+$black: #000;
+$white: #fff;
+$bg-light: #d7e9f7;
+$bg-regular: #219bd8;
+$bg-heavy: #0a6297;
+
+//Fonts
+$font-openSans-regular: 'Open Sans', 'Arial', sans-serif;
+$font-openSans-semi: 'Open Sans - Semibold', 'Arial', sans-serif;
+
+//Mixins
+$mixin pseudo {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: red;
+  top: 0;
+  left: 0;
+}
