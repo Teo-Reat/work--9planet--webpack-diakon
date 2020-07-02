@@ -16,13 +16,13 @@
   margin-right: 40px;
 }
 
-.header__user {
+.icon-lk {
   height: 18px;
   width: 18px;
   fill: $black;
 }
 
-.header__search {
+.icon-search {
   width: 18px;
   height: 18px;
   fill: $black;
@@ -32,17 +32,11 @@
   &__item {
     display: inline-block;
     position: relative;
-    padding-right: 21px;
     text-transform: uppercase;
-    &::before {
-      position: absolute;
-      content: url("../assets/images/svg/arrow_down.svg");
-      display: block;
-      top: 0;
-      right: 0;
-      width: 13px;
-      height: 7px;
-    }
+  }
+  .icon-arrow_down {
+    width: 20px;
+    height: 15px;
   }
 }
 
@@ -106,26 +100,27 @@
   &__third {
     background: $color-heavy-blue url("../assets/images/bg-prime-1.png") right center;
   }
+}
 
-  & .slick-dots {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0;
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    & button {
-      border: 1px solid $white;
-      width: 37px;
-      height: 7px;
-      background: transparent;
-      margin: 0 6px;
-    }
-    & > .slick-active > button {
-      background: $white;
-    }
+.prime .slick-dots,
+.news .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  & button {
+    border: 1px solid $white;
+    width: 37px;
+    height: 7px;
+    background: transparent;
+    margin: 0 6px;
+  }
+  & > .slick-active > button {
+    background: $white;
   }
 }
 
@@ -157,40 +152,213 @@
   }
 }
 
+.icon-ico_1,
+.icon-ico_2,
+.icon-ico_3,
+.icon-ico_4,
+.icon-ico_5,
+.icon-ico_6,
+.icon-ico_7,
+.icon-ico_8,
+.icon-ico_9,
+.icon-ico_10 {
+  width: 68px;
+  height: 68px;
+}
+
 //Main__News
 .news {
   background: $color-light-blue;
   padding: 70px 10px 0;
   &__item {
+    position: relative;
+    padding: 0;
+    margin-top: 15px;
+    &__description {
+      margin-top: 111px;
+      padding-bottom: 30px;
+      position: relative;
+      z-index: 5;
+      &::after {
+        @include mix-pseudo-overlay;
+        background-color: #0d2c39;
+        opacity: 0.48;
+        z-index: -1;
+      }
+    }
+    &__billet {
+      text-transform: uppercase;
+      font-family: $font-openSans-regular;
+      font-size: 11px;
+      font-weight: 300;
+      min-height: 30px;
+      color: #040404;
+      letter-spacing: 2.08px;
+      display: inline-block;
+      padding: 8px 17px;
+      border: 1px solid rgba(249, 252, 253, 0.24);
+      border-radius: 2px;
+      margin: 26px 0 0 30px;
+      position: relative;
+      z-index: 10;
+    }
+    &__date {
+      font-family: $font-openSans-regular;
+      font-size: 14px;
+      font-weight: 300;
+      padding: 25px 0 16px 55px;
+      border-bottom: 1px solid rgba(255, 255, 255, .18);
+      position: relative;
+      & > svg {
+        position: absolute;
+        height: 22px;
+        width: 22px;
+        top: 21px;
+        left: 30px;
+      }
+    }
+    &__title {
+      margin: 18px 0 0 0;
+      font-family: $font-openSans-semi;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      padding-left: 30px;
+    }
+  }
 
-  }
-  .news__item__billet {
-    text-transform: uppercase;
-    font-family: $font-openSans-regular;
-    font-size: 11px;
-    font-weight: 300;
-    line-height: 50.67px;
-    color: #040404;
-    letter-spacing: 2.08px;
-    display: inline-block;
-    padding: 0 17px;
-  }
   &__company {
     background: $color-heavy-blue url("../assets/images/urology.jpg") center center;
+    color: $white;
+    &::after {
+      @include mix-pseudo-overlay;
+      background-color: #040404;
+      opacity: 0.12;
+      z-index: 5;
+    }
     & .news__item__billet {
       background: $color-light-blue;
     }
+    & .icon-time {
+      fill: $white;
+    }
   }
   &__industry {
-
+    background: $white;
+    & > .news__item__billet {
+      background: $color-light-green;
+    }
+    & > .news__item__title {
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(115, 164, 184, .32);
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 45px;
+      }
+    }
+    & svg {
+      fill: #999;
+    }
   }
   &__events {
+    color: $white;
     background: $color-heavy-blue url("../assets/images/atm.jpg") center center;
+    & .news__item__billet {
+      background: $color-light-blue;
+    }
+    & .news__item__date {
+      & svg {
+        fill: #999;
+      }
+    }
   }
   &__webinars {
     background: $color-heavy-blue url("../assets/images/cystatin.jpg") center center;
+    color: $white;
+    & .news__item__billet {
+      background: $color-light-green;
+    }
+    & .news__item__date {
+      & svg {
+        fill: #999;
+      }
+    }
   }
   &__actions {
-    background: $color-heavy-blue url("../assets/images/pronadisa.jpg") center center;
+    background: $white;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 73px;
+      height: 47px;
+      background: url("../assets/images/conda.jpg");
+      top: 25px;
+      right: 18px;
+    }
+    & .slick-dots {
+      bottom: unset;
+      top: 220px;
+      & button {
+        border: none;
+        width: 44px;
+        height: 6px;
+        background: #979899;
+        margin: 0 10px;
+      }
+      & > .slick-active > button {
+        background: $color-light-green;
+      }
+    }
+    & .news__item__billet {
+      background: $color-light-blue;
+    }
+    & .news__item__image {
+      & img {
+        margin: 15px auto 0;
+        display: block;
+      }
+    }
+    & .news__item__title {
+      margin-top: -30px;
+      background: $color-light-green;
+      position: relative;
+      z-index: 10;
+      padding: 29px 30px 37px;
+    }
+  }
+  &__item__wrapper {
+    background: $white;
+    & svg {
+      width: 68px;
+      height: 68px;
+    }
+  }
+  &__item__subitem {
+    display: flex;
+    justify-content: space-between;
+    padding: 34px 37px 36px 30px;
+    box-shadow: 0 3px 7px rgba(62, 125, 177, 0.08);
+    border-bottom: 1px solid rgba(115, 164, 184, .32);
+  }
+  &__subitem__description {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $font-openSans-semi;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
   }
 }
+
+
+//Icons
+//.icon {
+//  display: inline-block;
+//  width: 1em;
+//  height: 1em;
+//  stroke-width: 0;
+//  stroke: currentColor;
+//  fill: currentColor;
+//}

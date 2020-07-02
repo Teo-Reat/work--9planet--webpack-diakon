@@ -12,10 +12,14 @@ $font-openSans-regular: 'Open Sans', 'Arial', sans-serif;
 $font-openSans-semi: 'Open Sans - Semibold', 'Arial', sans-serif;
 
 //Mixins
-@mixin mix-pseudo {
+@mixin mix-pseudo-overlay {
   position: absolute;
   content: '';
   display: block;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 @mixin mix-pseudo-test {

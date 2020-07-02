@@ -35,4 +35,14 @@ $(document).ready(() => {
 		// 	}
 		// ]
 	});
+
+	$('.news__actions__slider').slick({
+		autoplay: true,
+		dots: true,
+		arrows: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	});
 })
