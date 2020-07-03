@@ -1,0 +1,17 @@
+.no-border {
+  border: none;
+}
+
+.header__menu__btn_close {
+  & svg {
+    height: 16px;
+    width: 16px;
+    fill: $black;
+    margin-top: 3px;
+    margin-left: 3px;
+  }
+  &::after {
+    background: transparent;
+    box-shadow: none;
+  }
+}

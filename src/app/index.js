@@ -1,39 +1,16 @@
 import $ from 'jquery'
+// import './formstyler'
 import 'slick-carousel'
 
 $(document).ready(() => {
 	$('.prime__slider').slick({
+		autoplay: true,
 		dots: true,
 		arrows: false,
 		infinite: true,
 		speed: 300,
 		slidesToShow: 1,
-		slidesToScroll: 1,
-		// responsive: [
-		// 	{
-		// 		breakpoint: 1024,
-		// 		settings: {
-		// 			slidesToShow: 3,
-		// 			slidesToScroll: 3,
-		// 			infinite: true,
-		// 			dots: true
-		// 		}
-		// 	},
-		// 	{
-		// 		breakpoint: 600,
-		// 		settings: {
-		// 			slidesToShow: 2,
-		// 			slidesToScroll: 2
-		// 		}
-		// 	},
-		// 	{
-		// 		breakpoint: 480,
-		// 		settings: {
-		// 			slidesToShow: 1,
-		// 			slidesToScroll: 1
-		// 		}
-		// 	}
-		// ]
+		slidesToScroll: 1
 	});
 
 	$('.news__actions__slider').slick({
@@ -45,4 +22,12 @@ $(document).ready(() => {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 	});
+
+	$('.js-header__menu__btn').click(() => {
+		$('.js-mobile').slideToggle()
+		$('.js-header__menu__btn').toggleClass('header__menu__btn_close')
+	})
+
+
+	// $('#network__select').styler()
 })
