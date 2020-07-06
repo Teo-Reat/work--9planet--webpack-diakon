@@ -4,6 +4,7 @@
 
 .header__menu__btn_close {
   & svg {
+    display: block;
     height: 16px;
     width: 16px;
     fill: $black;

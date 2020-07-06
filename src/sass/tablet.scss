@@ -1,0 +1,155 @@
+@media (min-width: 768px) {
+  //Header
+  .header {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #cdcdcd;
+    &__logo {
+      width: 152px;
+      height: 40px;
+    }
+    &__hot-line {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      &__phone {
+        color: #3c3c3b;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      &__description {
+        color: #919191;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    &__user {
+      display: flex;
+      align-self: center;
+      & button {
+        color: $color-regular-blue;
+        display: flex;
+      }
+      & span {
+        display: block;
+        margin-left: 9px;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 1px;
+      }
+    }
+    & .icon-lk {
+      fill: $color-regular-blue;
+    }
+    &__search-language__wrapper {
+      flex-direction: column-reverse;
+    }
+    &__search {
+      text-align: right;
+      margin-right: 13px;
+    }
+    &__language {
+      margin-right: 4px;
+      margin-bottom: 20px;
+      display: flex;
+      & span {
+        color: #31261a;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      & .icon-arrow_down {
+        margin-bottom: -3px;
+      }
+    }
+    & .icon-search {
+      margin-right: 0;
+    }
+    //Mobile navigation button
+    &__menu {
+      display: none;
+    }
+  }
+  //Navigation Desktops
+  .navigation {
+    display: block;
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      &__item {
+        margin-right: 20px;
+        & a {
+          padding: 10px 0 11px;
+          display: block;
+          font-size: 16px;
+          font-weight: 400;
+          color: $black;
+          transition: .5s;
+          &:hover {
+            color: $color-regular-blue;
+            transition: .5s;
+          }
+        }
+      }
+    }
+  }
+  //Main__Prime
+  .prime {
+    &__first__new,
+    &__second__new,
+    &__third__new {
+      font-size: 12px;
+      font-weight: 700;
+    }
+    &__slider {
+      &__image {
+        display: block;
+        margin-top: 60px;
+        & img {
+          width: 100%;
+        }
+      }
+    }
+    &__slick-next,
+    &__slick-prev {
+      position: absolute;
+      top: calc(50% - 26px);
+      z-index: 10;
+      width: 52px;
+      height: 52px;
+      & svg {
+        width: 52px;
+        height: 52px;
+      }
+      &:hover {
+        background-color: $color-heavy-blue;
+      }
+    }
+    &__slick-next {
+      right: 40px;
+    }
+    &__slick-prev {
+
+      left: 40px;
+    }
+  }
+  //Main__Products
+  .products {
+    &__title {
+      text-align: center;
+    }
+    &__wrapper {
+      justify-content: center;
+    }
+  }
+  //Main__News
+  .news {
+    &__wrapper {
+      justify-content: space-between;
+    }
+    &__item {
+      max-width: 350px;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@media (min-width: 1024px) {
+  //Header
+  .header {
+    min-height: 100px;
+    &__work-time {
+      display: flex;
+      color: #3c3c3b;
+      font-size: 14px;
+      font-weight: 400;
+      align-self: center;
+      & svg {
+        height: 19px;
+        width: 19px;
+      }
+      & span {
+        margin-left: 9px;
+        margin-top: 1px;
+      }
+    }
+  }
+  //Navigation Desktops
+  .navigation {
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      &__item {
+        margin-right: 0;
+        & a {
+          padding: 20px 0 22px;
+        }
+      }
+    }
+  }
+  //Main__Prime
+  .prime {
+    &__first,
+    &__second,
+    &__third {
+      &__title {
+        font-size: 37px;
+      }
+      &__description {
+        margin-left: 70px;
+        font-size: 18px;
+      }
+    }
+    &__slick-next {
+      right: 40px;
+    }
+    &__slick-prev {
+      left: 40px;
+    }
+  }
+  //Main__Products
+  .products {
+    &__title {
+      text-align: left;
+      font-size: 37px;
+    }
+    &__item {
+      &__description {
+        font-size: 18px;
+      }
+    }
+  }
+  //Main__News
+  .news {
+    &__item {
+      width: 32%;
+      max-width: 32%;
+      &__title {
+        font-size: 18px;
+      }
+    }
+  }
+  //Main__Network
+  .network {
+    &__title {
+      margin: 0;
+      font-size: 37px;
+    }
+    &__select__label {
+      margin: 0;
+    }
+  }
+}

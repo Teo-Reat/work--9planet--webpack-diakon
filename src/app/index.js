@@ -3,14 +3,25 @@ import $ from 'jquery'
 import 'slick-carousel'
 
 $(document).ready(() => {
-	$('.prime__slider').slick({
-		autoplay: true,
+	$('.js-prime__slider').slick({
 		dots: true,
-		arrows: false,
+		arrows: true,
 		infinite: true,
 		speed: 300,
 		slidesToShow: 1,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		prevArrow: '<button type="button" class="slick-prev prime__slick-prev"><svg class="icon icon-arrow_sl_l"><use xlink:href="#icon-arrow_sl_l"></use></svg></button>',
+		nextArrow: '<button type="button" class="slick-next prime__slick-next"><svg class="icon icon-arrow_sl_r"><use xlink:href="#icon-arrow_sl_r"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+				}
+			},
+		]
 	});
 
 	$('.news__actions__slider').slick({

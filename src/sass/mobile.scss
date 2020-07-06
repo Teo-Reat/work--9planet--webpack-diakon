@@ -2,24 +2,39 @@
 .header {
   min-height: 59px;
   &__wrapper {
-    padding: 0 10px;
     align-items: baseline;
     justify-content: space-between;
+    display: flex;
   }
   &__logo {
-    min-height: 24px;
-    min-width: 90px;
+    height: 24px;
+    width: 90px;
     margin: 17px 40px 17px 0;
+  }
+  &__hot-line {
+    display: none;
+  }
+  &__work-time {
+    display: none;
+  }
+  &__user {
+    & span {
+      display: none;
+    }
   }
   & .icon-lk {
     height: 18px;
     width: 18px;
     fill: $black;
   }
+  &__search-language__wrapper {
+    display: flex;
+  }
   & .icon-search {
     width: 18px;
     height: 18px;
     fill: $black;
+    margin-right: 8vw;
   }
   &__language {
     &__item {
@@ -49,8 +64,15 @@
         left: 0;
         box-shadow: 0 10px $black, 0 20px $black;
       }
+      & svg {
+        display: none;
+      }
     }
   }
+}
+//Navigation Desktops
+.navigation {
+  display: none;
 }
 
 //Header__Mobile Menu
@@ -129,6 +151,9 @@
 .prime {
   &__slider {
     position: relative;
+    &__image {
+      display: none;
+    }
   }
   &__first,
   &__second,
@@ -136,11 +161,13 @@
     background: $color-heavy-blue url("../assets/images/bg-prime-1.png") center center;
     background-size: cover;
     min-height: 499px;
-    padding: 0 10px;
     &__new {
       padding: 5px 10px 8px;
       background: $color-regular-green;
       margin-top: 49px;
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
     }
     &__title {
       margin-top: 23px;
@@ -165,6 +192,7 @@
   }
 }
 
+//Slick settings
 .prime .slick-dots,
 .news .slick-dots {
   display: flex;
@@ -197,7 +225,6 @@
 
 //Main__Products
 .products {
-  padding: 0 10px;
   text-align: center;
   &__title {
     font-family: $font-openSans-semi;
@@ -212,6 +239,9 @@
   }
   &__item {
     margin-top: 30px;
+    &__description {
+      font-size: 15px;
+    }
   }
 }
 
@@ -284,7 +314,7 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 22px;
-      padding-left: 30px;
+      padding: 0 10px 0 30px;
     }
   }
 
@@ -422,8 +452,9 @@
   }
   &__select {
     width: 100%;
-    &__wrapper {
+    &__label {
       margin-top: 25px;
+      display: block;
     }
   }
   &__map {

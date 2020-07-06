@@ -778,37 +778,54 @@
 </svg>
 <header class="header">
     <div class="container">
-        <div class="row header__wrapper">
-            <div class="header__logo">
-                <img src="assets/images/svg/logo.svg" alt="Logotype">
+        <div class="row">
+            <div class="col-12 header__wrapper">
+                <div class="header__logo">
+                    <img src="assets/images/svg/logo.svg" alt="Logotype">
+                </div>
+                <div class="header__hot-line">
+                    <div class="header__hot-line__phone">
+                        8 800 2006 339
+                    </div>
+                    <div class="header__hot-line__description">
+                        Горячая линия
+                    </div>
+                </div>
+                <div class="header__work-time">
+                    <svg class="icon icon-time1"><use xlink:href="#icon-time1"></use></svg>
+                    <span>пн−пт  09:00−19:00</span>
+                </div>
+                <div class="header__user">
+                    <button>
+                        <svg class="icon icon-lk">
+                            <use xlink:href="#icon-lk"></use>
+                        </svg>
+                        <span>Личный кабинет</span>
+                    </button>
+                </div>
+                <div class="header__search-language__wrapper">
+                    <div class="header__search">
+                        <button>
+                            <svg class="icon icon-search">
+                                <use xlink:href="#icon-search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="header__language">
+                        <button>
+                            <span class="header__language__item">eng</span>
+                            <svg class="icon icon-arrow_down">
+                                <use xlink:href="#icon-arrow_down"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <nav class="header__menu">
+                    <button class="header__menu__btn js-header__menu__btn">
+                        <svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
+                    </button>
+                </nav>
             </div>
-            <div class="header__user">
-                <button>
-                    <svg class="icon icon-lk">
-                        <use xlink:href="#icon-lk"></use>
-                    </svg>
-                </button>
-            </div>
-            <div class="header__search">
-                <button>
-                    <svg class="icon icon-search">
-                        <use xlink:href="#icon-search"></use>
-                    </svg>
-                </button>
-            </div>
-            <div class="header__language">
-                <button>
-                    <span class="header__language__item">eng</span>
-                    <svg class="icon icon-arrow_down">
-                        <use xlink:href="#icon-arrow_down"></use>
-                    </svg>
-                </button>
-            </div>
-            <nav class="header__menu">
-                <button class="header__menu__btn js-header__menu__btn">
-                    <svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
-                </button>
-            </nav>
         </div>
     </div>
     <div class="mobile js-mobile">
@@ -935,25 +952,70 @@
         </ul>
     </div>
 </header>
+<nav class="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul class="navigation__list">
+                    <li class="navigation__list__item">
+                        <a href="#">Компания</a>
+                    </li>
+                    <li class="navigation__list__item">
+                        <a href="#">Продукты</a>
+                    </li>
+                    <li class="navigation__list__item">
+                        <a href="#">Пресс-центр</a>
+                    </li>
+                    <li class="navigation__list__item">
+                        <a href="#">Новинки и акции</a>
+                    </li>
+                    <li class="navigation__list__item">
+                        <a href="#">Библиотека</a>
+                    </li>
+                    <li class="navigation__list__item">
+                        <a href="#">Вебинары</a>
+                    </li>
+                    <li class="navigation__list__item">
+                        <a href="#">Сервис</a>
+                    </li>
+                    <li class="navigation__list__item">
+                        <a href="#">Дилеры</a>
+                    </li>
+                    <li class="navigation__list__item">
+                        <a href="#">Клиенту</a>
+                    </li>
+                    <li class="navigation__list__item">
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
 <main class="main">
-    <section class="prime prime__slider">
+    <section class="prime prime__slider js-prime__slider">
         <div class="prime__slider__item prime__first">
             <div class="container">
                 <div class="row">
-                    <div class="prime__first__new">
-                        новинка
+                    <div class="col-12 col-md-7">
+                        <div class="prime__first__new">
+                            новинка
+                        </div>
+                        <h2 class="prime__first__title">
+                            FURUNO CA-800 —
+                            автоматический
+                            биохимический
+                            анализатор
+                        </h2>
+                        <p class="prime__first__description">
+                            Анализатор биохимический автоматический нового
+                            поколения – удобный, надежный, интуитивный в управлениилегкий в обслуживании и экономически
+                            эффективный
+                        </p>
                     </div>
-                    <h2 class="prime__first__title">
-                        FURUNO CA-800 —
-                        автоматический
-                        биохимический
-                        анализатор
-                    </h2>
-                    <p class="prime__first__description">
-                        Анализатор биохимический автоматический нового
-                        поколения – удобный, надежный, интуитивный в управлениилегкий в обслуживании и экономически
-                        эффективный
-                    </p>
+                    <div class="prime__slider__image col-md-5">
+                        <img src="assets/images/furuno.png" alt="furuno">
+                    </div>
                 </div>
             </div>
         </div>
@@ -987,7 +1049,7 @@
                 </div>
             </div>
             <div class="row products__wrapper">
-                <div class="products__item col-6">
+                <div class="products__item col-6 col-md-4 col-lg-15">
                     <div class="products__item__image">
                         <svg class="icon icon-ico_1">
                             <use xlink:href="#icon-ico_1"></use>
@@ -997,7 +1059,7 @@
                         Централизация
                     </div>
                 </div>
-                <div class="products__item col-6">
+                <div class="products__item col-6 col-md-4 col-lg-15">
                     <div class="products__item__image">
                         <svg class="icon icon-ico_2">
                             <use xlink:href="#icon-ico_2"></use>
@@ -1007,7 +1069,7 @@
                         Гематология
                     </div>
                 </div>
-                <div class="products__item col-6">
+                <div class="products__item col-6 col-md-4 col-lg-15">
                     <div class="products__item__image">
                         <svg class="icon icon-ico_3">
                             <use xlink:href="#icon-ico_3"></use>
@@ -1018,7 +1080,7 @@
                         химия
                     </div>
                 </div>
-                <div class="products__item col-6">
+                <div class="products__item col-6 col-md-4 col-lg-15">
                     <div class="products__item__image">
                         <svg class="icon icon-ico_4">
                             <use xlink:href="#icon-ico_4"></use>
@@ -1028,7 +1090,7 @@
                         Гемостаз
                     </div>
                 </div>
-                <div class="products__item col-6">
+                <div class="products__item col-6 col-md-4 col-lg-15">
                     <div class="products__item__image">
                         <svg class="icon icon-ico_5">
                             <use xlink:href="#icon-ico_5"></use>
@@ -1039,7 +1101,7 @@
                         диагностика
                     </div>
                 </div>
-                <div class="products__item col-6">
+                <div class="products__item col-6 col-md-4 col-lg-15">
                     <div class="products__item__image">
                         <svg class="icon icon-ico_6">
                             <use xlink:href="#icon-ico_6"></use>
@@ -1049,7 +1111,7 @@
                         Иммунохимия
                     </div>
                 </div>
-                <div class="products__item col-6">
+                <div class="products__item col-6 col-md-4 col-lg-15">
                     <div class="products__item__image">
                         <svg class="icon icon-ico_7">
                             <use xlink:href="#icon-ico_7"></use>
@@ -1059,7 +1121,7 @@
                         Анализ мочи
                     </div>
                 </div>
-                <div class="products__item col-6">
+                <div class="products__item col-6 col-md-4 col-lg-15">
                     <div class="products__item__image">
                         <svg class="icon icon-ico_8">
                             <use xlink:href="#icon-ico_8"></use>
@@ -1069,7 +1131,7 @@
                         Иммуно-гематология
                     </div>
                 </div>
-                <div class="products__item col-6">
+                <div class="products__item col-6 col-md-4 col-lg-15">
                     <div class="products__item__image">
                         <svg class="icon icon-ico_9">
                             <use xlink:href="#icon-ico_9"></use>
@@ -1079,7 +1141,7 @@
                         Преаналитика
                     </div>
                 </div>
-                <div class="products__item col-6">
+                <div class="products__item col-6 col-md-4 col-lg-15">
                     <div class="products__item__image">
                         <svg class="icon icon-ico_10">
                             <use xlink:href="#icon-ico_10"></use>
@@ -1094,8 +1156,8 @@
     </section>
     <section class="news">
         <div class="container">
-            <div class="row">
-                <div class="news__item news__company col-12">
+            <div class="row news__wrapper">
+                <div class="news__item news__company col-12 col-md-6 col-lg-4">
                     <div class="news__item__billet">
                         НОВОСТИ КОМПАНИИ
                     </div>
@@ -1114,7 +1176,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="news__item news__industry col-12">
+                <div class="news__item news__industry col-12 col-md-6 col-lg-4">
                     <div class="news__item__billet">
                         НОВОСТИ ОТРАСЛИ
                     </div>
@@ -1140,7 +1202,7 @@
                         раздутый миф
                     </div>
                 </div>
-                <div class="news__item news__events col-12">
+                <div class="news__item news__events col-12 col-md-6 col-lg-4">
                     <div class="news__item__billet">
                         события
                     </div>
@@ -1159,7 +1221,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="news__item news__webinars col-12">
+                <div class="news__item news__webinars col-12 col-md-6 col-lg-4">
                     <div class="news__item__billet">
                         вебинары
                     </div>
@@ -1178,7 +1240,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="news__item news__actions col-12">
+                <div class="news__item news__actions col-12 col-md-6 col-lg-4">
                     <div class="news__item__billet">
                         акции
                     </div>
@@ -1205,7 +1267,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="news__item col-12">
+                <div class="news__item col-12 col-md-6 col-lg-4">
                     <div class="news__item__wrapper">
                         <div class="news__item__subitem">
                             <div class="news__subitem__description">
@@ -1245,12 +1307,10 @@
     <section class="network">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 col-lg-6">
                     <h2 class="network__title">Дилерская сеть</h2>
                 </div>
-            </div>
-            <div class="row network__select__wrapper">
-                <div class="col-12">
+                <div class="col-12 col-lg-5 ml-auto">
                     <label class="network__select__label">
                         <select name="network" id="network__select" class="network__select">
                             <option value="1">Tunas travel with riddle!</option>
@@ -1279,7 +1339,7 @@
     <section class="about">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 col-md-6">
                     <ul class="about__menu">
                         <li class="about__menu__item">
                             <a href="#">О компании</a>
@@ -1310,7 +1370,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="about__contacts col-12">
+                <div class="about__contacts col-12 col-md-6">
                     <strong class="about__hot__phone">8 800 2006 339</strong>
                     <p class="about__hot__description">Телефон горячей линии </p>
                     <strong class="about__phone">+7 (495) 980 63 39</strong>
