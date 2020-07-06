@@ -491,6 +491,9 @@
       }
     }
   }
+  &__submenu {
+    display: none;
+  }
   &__phone,
   &__hot__phone {
     font-size: 24px;
@@ -511,6 +514,9 @@
     font-size: 16px;
     font-weight: 400;
     margin-top: 10px;
+  }
+  &__logo {
+    display: none;
   }
 }
 //Footer__Stuff

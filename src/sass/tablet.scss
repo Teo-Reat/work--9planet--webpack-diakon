@@ -51,7 +51,7 @@
     }
     &__language {
       margin-right: 4px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       display: flex;
       & span {
         color: #31261a;
@@ -150,6 +150,18 @@
     }
     &__item {
       max-width: 350px;
+    }
+  }
+  //Main__Network
+  .network {
+    &__title {
+      text-align: center;
+    }
+  }
+  //Footer
+  .stuff {
+    &__wrapper {
+      text-align: center;
     }
   }
 }
