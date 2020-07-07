@@ -17,14 +17,12 @@
             <path d="M16 22.955c-0.002 0-0.004 0-0.006 0-0.288 0-0.549-0.114-0.741-0.299l-11.797-11.797c-0.194-0.194-0.314-0.462-0.314-0.757 0-0.591 0.48-1.071 1.071-1.071 0.296 0 0.564 0.12 0.757 0.314v0l11.029 11.051 11.029-11.051c0.194-0.194 0.462-0.314 0.757-0.314 0.591 0 1.071 0.48 1.071 1.071 0 0.296-0.12 0.563-0.314 0.757l-11.797 11.797c-0.192 0.185-0.453 0.299-0.74 0.299-0.002 0-0.005 0-0.007 0v0z"></path>
         </symbol>
         <symbol id="icon-arrow-l" viewBox="0 0 32 32">
-            <path fill="#eef2f6" style="fill: var(--color2, #eef2f6)"
-                  d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16c-8.837 0-16-7.163-16-16s7.163-16 16-16z"></path>
+            <path d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16c-8.837 0-16-7.163-16-16s7.163-16 16-16z"></path>
             <path fill="#fff" style="fill: var(--color3, #fff)"
                   d="M17.944 20.853c-0.001 0-0.002 0-0.003 0-0.163 0-0.31-0.066-0.417-0.172v0l-4.255-4.261c-0.108-0.107-0.175-0.256-0.175-0.421s0.067-0.313 0.175-0.421l4.255-4.255c0.108-0.109 0.258-0.177 0.424-0.177 0.329 0 0.595 0.266 0.595 0.595 0 0.163-0.065 0.31-0.171 0.418v0l-3.846 3.84 3.846 3.84c0.108 0.107 0.175 0.256 0.175 0.421s-0.067 0.313-0.175 0.421v0c-0.107 0.106-0.255 0.172-0.417 0.172-0.003 0-0.007 0-0.010 0v0z"></path>
         </symbol>
         <symbol id="icon-arrow-r" viewBox="0 0 32 32">
-            <path fill="#eef2f6" style="fill: var(--color2, #eef2f6)"
-                  d="M16 32c-8.837 0-16-7.163-16-16s7.163-16 16-16c8.837 0 16 7.163 16 16s-7.163 16-16 16z"></path>
+            <path d="M16 32c-8.837 0-16-7.163-16-16s7.163-16 16-16c8.837 0 16 7.163 16 16s-7.163 16-16 16z"></path>
             <path fill="#fff" style="fill: var(--color3, #fff)"
                   d="M14.056 20.853c-0.003 0-0.006 0-0.009 0-0.163 0-0.31-0.066-0.417-0.172v0c-0.108-0.107-0.175-0.256-0.175-0.421s0.067-0.313 0.175-0.421v0l3.846-3.84-3.846-3.84c-0.108-0.108-0.174-0.256-0.174-0.421 0-0.329 0.266-0.595 0.595-0.595 0.164 0 0.313 0.067 0.421 0.174v0l4.255 4.261c0.108 0.107 0.175 0.256 0.175 0.421s-0.067 0.313-0.175 0.421v0l-4.249 4.261c-0.107 0.106-0.255 0.172-0.417 0.172-0.001 0-0.002 0-0.004 0v0z"></path>
         </symbol>
@@ -777,7 +775,7 @@
     </defs>
 </svg>
 <header class="header">
-    <div class="container">
+    <section class="container">
         <div class="row">
             <div class="col-12 header__wrapper">
                 <div class="header__logo">
@@ -792,7 +790,9 @@
                     </div>
                 </div>
                 <div class="header__work-time">
-                    <svg class="icon icon-time1"><use xlink:href="#icon-time1"></use></svg>
+                    <svg class="icon icon-time1">
+                        <use xlink:href="#icon-time1"></use>
+                    </svg>
                     <span>пн−пт  09:00−19:00</span>
                 </div>
                 <div class="header__user">
@@ -805,7 +805,7 @@
                 </div>
                 <div class="header__search-language__wrapper">
                     <div class="header__search">
-                        <button>
+                        <button class="js-header__search__button header__search__button">
                             <svg class="icon icon-search">
                                 <use xlink:href="#icon-search"></use>
                             </svg>
@@ -822,13 +822,15 @@
                 </div>
                 <nav class="header__menu">
                     <button class="header__menu__btn js-header__menu__btn">
-                        <svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
+                        <svg class="icon icon-close">
+                            <use xlink:href="#icon-close"></use>
+                        </svg>
                     </button>
                 </nav>
             </div>
         </div>
-    </div>
-    <div class="mobile js-mobile">
+    </section>
+    <section class="mobile js-mobile">
         <div class="mobile__contacts">
             <div class="mobile__hot__phone">8 800 2006 339</div>
             <div class="mobile__hot__description">Телефон горячей линии</div>
@@ -950,7 +952,60 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </section>
+    <section class="js-search search">
+        <div class="search__form__wrapper">
+            <form class="search__form">
+                <div class="search__form__input__wrapper">
+                    <label for="search"></label>
+                    <input type="text"
+                           class="js-search__form__input search__form__input"
+                           name="search"
+                           id="search">
+                </div>
+                <button class="js-search__form__button search__form__button" type="submit">
+                    <svg class="icon icon-search">
+                        <use xlink:href="#icon-search"></use>
+                    </svg>
+                </button>
+                <button class="js-search__form__close search__form__close" type="button">
+                    <svg class="icon icon-close">
+                        <use xlink:href="#icon-close"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <div class="search__results">
+            <div class="search__results__wrapper">
+                <ul class="search__results__list">
+                    <li class="search__results__item">
+                        <a href="#">
+                            9 показателей
+                            <span class="search__results__item_active">анализа</span>
+                            крови
+                        </a>
+                    </li>
+                    <li class="search__results__item">
+                        <a href="#">
+                            общий
+                            <span class="search__results__item_active">анализ</span>
+                            крови,
+                            <span class="search__results__item_active">анализ</span>
+                            параметров гемостаза
+                        </a>
+                    </li>
+                    <li class="search__results__item">
+                        <a href="#">
+                            Выявлены факторы
+                            <span class="search__results__item_active">анализа,</span>
+                            связанные с ОРДС при COVID-19
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="search__results__button">Показать все результаты</button>
+            </div>
+        </div>
+    </section>
 </header>
 <nav class="navigation">
     <div class="container">
@@ -1427,10 +1482,14 @@
                         © 2020 АО «ДИАКОН». Все права защищены
                     </div>
                     <div class="stuff__rules">
-                        Политика конфиденциальности
+                        <a href="#">
+                            Политика конфиденциальности
+                        </a>
                     </div>
                     <div class="stuff__map">
-                        Карта сайта
+                        <a href="#">
+                            Карта сайта
+                        </a>
                     </div>
                 </div>
             </div>

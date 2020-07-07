@@ -70,6 +70,37 @@
       display: none;
     }
   }
+  //Search form
+  .search {
+
+    &__form {
+      &__input {
+        min-height: 74px;
+        padding: 0 15px;
+      }
+
+      &__button {
+        width: 74px;
+        height: 74px;
+
+        & svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      &__close {
+        width: 74px;
+        height: 74px;
+        & svg {
+          height: 18px;
+          width: 18px;
+          fill: #aaaaaa;
+        }
+      }
+    }
+  }
+
   //Navigation Desktops
   .navigation {
     display: block;
@@ -118,12 +149,15 @@
       z-index: 10;
       width: 52px;
       height: 52px;
+      transition: .5s;
       & svg {
         width: 52px;
         height: 52px;
       }
       &:hover {
         background-color: $color-heavy-blue;
+        opacity: .3;
+        transition: .5s;
       }
     }
     &__slick-next {
@@ -150,6 +184,11 @@
     }
     &__item {
       max-width: 350px;
+    }
+    &__actions {
+      & .news__item__title {
+        padding-bottom: 96px;
+      }
     }
   }
   //Main__Network

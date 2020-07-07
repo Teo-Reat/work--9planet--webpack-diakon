@@ -18,9 +18,81 @@
       }
     }
     &__language {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
   }
+  //Search form
+  .search {
+    top: 30px;
+
+    &__form {
+      max-width: 500px;
+      margin-left: auto;
+      &__wrapper {
+        max-width: 930px;
+        margin: 0 auto;
+      }
+      &__input {
+        min-height: 69px;
+      }
+
+      &__button {
+        width: 69px;
+        height: 69px;
+
+      }
+
+      &__close {
+        width: 69px;
+        height: 69px;
+
+        & svg {
+          height: 18px;
+          width: 18px;
+          fill: #aaaaaa;
+        }
+      }
+    }
+    //Search results block
+    &__results {
+      max-width: 930px;
+      min-width: unset;
+      margin: 0 auto;
+      &__wrapper {
+        max-width: 500px;
+        margin-left: auto;
+      }
+      &__list {
+        padding: 0 10px 0;
+      }
+      &__item {
+        &_active {
+          font-weight: 700;
+        }
+        & a {
+          color: black;
+          display: block;
+          padding: 15px 0;
+          font-size: 15px;
+          font-weight: 400;
+          &:hover {
+            color: $color-regular-blue;
+          }
+        }
+      }
+      &__button {
+        width: 100%;
+        padding: 8px 0 10px;
+        background-color: #dbe3e8;
+        font-size: 14px;
+        font-weight: 400;
+        &:hover {
+          background: $color-regular-green;
+        }
+      }
+    }
+  }
+
   //Navigation Desktops
   .navigation {
     &__list {
@@ -69,6 +141,9 @@
       font-size: 37px;
     }
     &__item {
+      &:hover {
+        opacity: .8;
+      }
       &__description {
         font-size: 18px;
       }
@@ -79,8 +154,43 @@
     &__item {
       width: 32%;
       max-width: 32%;
+      &__image {
+        & img {
+          width: 245px;
+          height: 214px;
+        }
+      }
       &__title {
         font-size: 18px;
+      }
+    }
+    &__actions {
+      & .news__item__title {
+        padding-bottom: 75px;
+      }
+      &__slick-next,
+      &__slick-prev {
+        position: absolute;
+        top: 120px;
+        z-index: 10;
+        width: 42px;
+        height: 42px;
+        fill: #eef2f5;
+        transition: .5s;
+        & svg {
+          width: 42px;
+          height: 42px;
+        }
+        &:hover {
+          fill: #b7c8d5;
+          transition: .5s;
+        }
+      }
+      &__slick-next {
+        right: 20px;
+      }
+      &__slick-prev {
+        left: 20px;
       }
     }
   }
@@ -103,6 +213,13 @@
     &__menu {
       &__item {
         margin-top: 20px;
+        & a {
+          transition: .5s;
+          &:hover {
+            color: #b1def6;
+            transition: .5s;
+          }
+        }
         &:last-child {
           display: none;
         }
@@ -126,6 +243,11 @@
           color: $white;
           font-size: 14px;
           font-weight: 400;
+          transition: .5s;
+          &:hover {
+            color: #b1def6;
+            transition: .5s;
+          }
         }
       }
     }
@@ -137,7 +259,7 @@
     &__logo {
       display: block;
       position: absolute;
-      right: 0;
+      left: 0;
       bottom: 0;
       width: 218px;
       height: 57px;
@@ -148,12 +270,16 @@
   .stuff {
     &__wrapper {
       display: flex;
-      justify-content: space-between;
+      justify-content: start;
     }
-    &__rights,
     &__rules,
     &__map {
-      margin: 0;
+      margin: 0 0 0 80px;
+      transition: .5s;
+      &:hover {
+        opacity: 1;
+        transition: .5s;
+      }
     }
   }
 }

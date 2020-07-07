@@ -1,0 +1,10 @@
+@media (min-width: 1410px) {
+  //Main__News
+  .news {
+    &__actions {
+      & .news__item__title {
+        padding-bottom: 96px;
+      }
+    }
+  }
+}

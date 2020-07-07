@@ -1,58 +1,85 @@
 //Header
 .header {
   min-height: 59px;
+
   &__wrapper {
     align-items: baseline;
     justify-content: space-between;
     display: flex;
   }
+
   &__logo {
     height: 24px;
     width: 90px;
     margin: 17px 40px 17px 0;
   }
+
   &__hot-line {
     display: none;
   }
+
   &__work-time {
     display: none;
   }
+
   &__user {
     & span {
       display: none;
     }
   }
+
   & .icon-lk {
     height: 18px;
     width: 18px;
     fill: $black;
   }
+
   &__search-language__wrapper {
     display: flex;
   }
-  & .icon-search {
-    width: 18px;
-    height: 18px;
-    fill: $black;
-    margin-right: 8vw;
+
+  &__search {
+    &__button {
+      outline: transparent;
+      fill: $black;
+      transition: .5s;
+      &:hover {
+        fill: $color-regular-green;
+        transition: .5s;
+      }
+      &:active {
+        fill: $color-regular-green;
+      }
+    }
+    & .icon-search {
+      width: 18px;
+      height: 18px;
+      margin-right: 4vw;
+    }
   }
+
   &__language {
     &__item {
       display: inline-block;
       position: relative;
       text-transform: uppercase;
     }
+
     .icon-arrow_down {
       width: 20px;
       height: 15px;
     }
   }
+
   &__menu {
+    align-self: center;
     &__btn {
       height: 22px;
       width: 22px;
       display: block;
       position: relative;
+      outline: transparent;
+
       &::after {
         content: '';
         width: 27px;
@@ -64,15 +91,128 @@
         left: 0;
         box-shadow: 0 10px $black, 0 20px $black;
       }
+
       & svg {
         display: none;
       }
     }
   }
 }
+
 //Navigation Desktops
 .navigation {
   display: none;
+}
+
+//Search form
+.search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  box-sizing: border-box;
+  display: none;
+  overflow: hidden;
+
+  &__form {
+    display: flex;
+    background-color: #eef5f9;
+    border-bottom: 1px solid #fbfcfd;
+    &__input {
+      min-height: 59px;
+      width: 100%;
+      display: block;
+      border: none;
+      padding: 0 10px;
+      flex-shrink: 1;
+      font-size: 14px;
+      background: transparent;
+      outline: transparent;
+      &__wrapper {
+        width: 100%;
+      }
+    }
+
+    &__button {
+      width: 59px;
+      height: 59px;
+      flex-shrink: 0;
+      fill: $black;
+      position: relative;
+      outline: transparent;
+      transition: .5s;
+      &:hover {
+        fill: $color-regular-green;
+        transition: .5s;
+      }
+      &:active {
+        fill: $color-regular-green;
+      }
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 15px;
+        bottom: 15px;
+        width: 1px;
+        background: #dbddde;
+        right: 0;
+      }
+
+      & svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &__close {
+      width: 59px;
+      height: 59px;
+      flex-shrink: 0;
+      outline: transparent;
+      & svg {
+        height: 18px;
+        width: 18px;
+        fill: #aaaaaa;
+      }
+    }
+  }
+  //Search results block
+  &__results {
+    min-width: 100%;
+    &__wrapper {
+      background: #eef5f9;
+    }
+    &__list {
+      padding: 0 10px 0;
+    }
+    &__item {
+      &_active {
+        font-weight: 700;
+      }
+      & a {
+        color: black;
+        display: block;
+        padding: 15px 0;
+        font-size: 15px;
+        font-weight: 400;
+        &:hover {
+          color: $color-regular-blue;
+        }
+      }
+    }
+    &__button {
+      width: 100%;
+      padding: 8px 0 10px;
+      background-color: #dbe3e8;
+      font-size: 14px;
+      font-weight: 400;
+      &:hover {
+        background: $color-regular-green;
+      }
+    }
+  }
 }
 
 //Header__Mobile Menu
@@ -80,35 +220,42 @@
   display: none;
   background: #f1f7fc;
   padding: 35px 0 20px;
+
   &__contacts {
     border-bottom: 1px solid #dee6ec;
     padding-bottom: 30px;
   }
+
   &__hot__phone {
     font-family: $font-openSans-semi;
     font-size: 20px;
     font-weight: 700;
     margin: 0 10px;
   }
+
   &__hot__description {
     font-size: 13px;
     font-weight: 400;
     margin: 8px 10px;
   }
+
   &__phone {
     font-family: $font-openSans-semi;
     font-size: 20px;
     font-weight: 700;
     margin: 20px 10px;
   }
+
   &__email {
     font-family: $font-openSans-semi;
     font-size: 14px;
     font-weight: 400;
     margin: 8px 10px 0;
   }
+
   &__menu__item {
     border-bottom: 1px solid #dee6ec;
+
     & a {
       font-size: 16px;
       font-weight: 700;
@@ -118,25 +265,31 @@
       display: flex;
       justify-content: space-between;
     }
+
     & svg {
       width: 20px;
       height: 15px;
     }
+
     &_active {
       & svg {
         transform: rotate(180deg);
       }
     }
   }
+
   &__submenu {
     background: $white;
     padding: 20px 0 20px 25px;
+
     &__item {
       display: flex;
+
       & svg {
         width: 32px;
         height: 32px;
       }
+
       & span {
         align-self: center;
         margin-left: 15px;
@@ -151,16 +304,19 @@
 .prime {
   &__slider {
     position: relative;
+
     &__image {
       display: none;
     }
   }
+
   &__first,
   &__second,
   &__third {
     background: $color-heavy-blue url("../assets/images/bg-prime-1.png") center center;
     background-size: cover;
     min-height: 499px;
+
     &__new {
       padding: 5px 10px 8px;
       background: $color-regular-green;
@@ -169,12 +325,14 @@
       font-size: 10px;
       font-weight: 700;
     }
+
     &__title {
       margin-top: 23px;
       font-size: 28px;
       font-weight: 700;
       line-height: 34px;
     }
+
     &__description {
       margin-top: 23px;
       font-size: 16px;
@@ -203,6 +361,7 @@
   bottom: 50px;
   left: 0;
   right: 0;
+
   & button {
     border: 1px solid $white;
     width: 37px;
@@ -210,6 +369,7 @@
     background: transparent;
     margin: 0 6px;
   }
+
   & > .slick-active > button {
     background: $white;
   }
@@ -226,6 +386,7 @@
 //Main__Products
 .products {
   text-align: center;
+
   &__title {
     font-family: $font-openSans-semi;
     text-align: left;
@@ -234,11 +395,14 @@
     width: 100%;
     margin-top: 45px;
   }
+
   &__wrapper {
     margin-bottom: 63px;
   }
+
   &__item {
     margin-top: 30px;
+
     &__description {
       font-size: 15px;
     }
@@ -263,22 +427,38 @@
 .news {
   background: $color-light-blue;
   padding: 70px 10px 65px;
+
   &__item {
     position: relative;
     padding: 0;
     margin-top: 15px;
+    &:nth-child(1),
+    &:nth-child(3),
+    &:nth-child(4) {
+      &::after {
+        @include mix-pseudo-overlay;
+        background-color: #0d2c39;
+        opacity: .5;
+        top: 172px;
+        z-index: 1;
+        transition: .5s;
+      }
+      &:hover::after {
+        top: 0;
+        transition: .5s;
+      }
+    }
+
+
     &__description {
       margin-top: 111px;
       padding-bottom: 30px;
       position: relative;
       z-index: 5;
-      &::after {
-        @include mix-pseudo-overlay;
-        background-color: #0d2c39;
-        opacity: 0.48;
-        z-index: -1;
-      }
+
+
     }
+
     &__billet {
       text-transform: uppercase;
       font-size: 11px;
@@ -294,12 +474,14 @@
       position: relative;
       z-index: 10;
     }
+
     &__date {
       font-size: 14px;
       font-weight: 300;
       padding: 25px 0 16px 55px;
       border-bottom: 1px solid rgba(255, 255, 255, .18);
       position: relative;
+
       & > svg {
         position: absolute;
         height: 22px;
@@ -308,6 +490,7 @@
         left: 30px;
       }
     }
+
     &__title {
       margin: 18px 0 0 0;
       font-family: $font-openSans-semi;
@@ -321,64 +504,73 @@
   &__company {
     background: $color-heavy-blue url("../assets/images/urology.jpg") center center;
     color: $white;
-    &::after {
-      @include mix-pseudo-overlay;
-      background-color: #040404;
-      opacity: 0.12;
-      z-index: 5;
-    }
+
     & .news__item__billet {
       background: $color-light-blue;
     }
+
     & .icon-time {
       fill: $white;
     }
   }
+
   &__industry {
     background: $white;
+
     & > .news__item__billet {
       background: $color-light-green;
     }
+
     & > .news__item__title {
       padding-bottom: 30px;
       border-bottom: 1px solid rgba(115, 164, 184, .32);
+
       &:last-child {
         border-bottom: none;
         padding-bottom: 45px;
       }
     }
+
     & svg {
       fill: #999;
     }
   }
+
   &__events {
     color: $white;
     background: $color-heavy-blue url("../assets/images/atm.jpg") center center;
+
     & .news__item__billet {
       background: $color-light-blue;
     }
+
     & .news__item__date {
       & svg {
         fill: #999;
       }
     }
   }
+
   &__webinars {
     background: $color-heavy-blue url("../assets/images/cystatin.jpg") center center;
     color: $white;
+
     & .news__item__billet {
       background: $color-light-green;
     }
+
     & .news__item__date {
       & svg {
         fill: #999;
       }
     }
   }
+
   &__actions {
     background: $white;
     position: relative;
-    &::after {
+
+    &::before {
       content: '';
       position: absolute;
       display: block;
@@ -388,9 +580,11 @@
       top: 25px;
       right: 18px;
     }
+
     & .slick-dots {
       bottom: unset;
       top: 220px;
+
       & button {
         border: none;
         width: 44px;
@@ -398,19 +592,23 @@
         background: #979899;
         margin: 0 10px;
       }
+
       & > .slick-active > button {
         background: $color-light-green;
       }
     }
+
     & .news__item__billet {
       background: $color-light-blue;
     }
+
     & .news__item__image {
       & img {
         margin: 15px auto 0;
         display: block;
       }
     }
+
     & .news__item__title {
       margin-top: -30px;
       background: $color-light-green;
@@ -419,13 +617,16 @@
       padding: 29px 30px 37px;
     }
   }
+
   &__item__wrapper {
     background: $white;
+
     & svg {
       width: 68px;
       height: 68px;
     }
   }
+
   &__item__subitem {
     display: flex;
     justify-content: space-between;
@@ -433,6 +634,7 @@
     box-shadow: 0 3px 7px rgba(62, 125, 177, 0.08);
     border-bottom: 1px solid rgba(115, 164, 184, .32);
   }
+
   &__subitem__description {
     font-size: 18px;
     line-height: 24px;
@@ -446,17 +648,21 @@
 //Main__Network
 .network {
   padding: 55px 0 47px;
+
   &__title {
     font-size: 24px;
     font-weight: 400;
   }
+
   &__select {
     width: 100%;
+
     &__label {
       margin-top: 25px;
       display: block;
     }
   }
+
   &__map {
     width: 100%;
     min-height: 742px;
@@ -469,6 +675,7 @@
   background: $color-heavy-blue;
   color: $white;
 }
+
 //Footer__About
 .about {
   padding: 40px 0 70px;
@@ -477,13 +684,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   &__contacts {
     display: flex;
     flex-direction: column;
   }
+
   &__menu {
     &__item {
       margin-top: 15px;
+
       & a {
         color: $white;
         font-size: 16px;
@@ -491,45 +701,68 @@
       }
     }
   }
+
   &__submenu {
     display: none;
   }
+
   &__phone,
   &__hot__phone {
     font-size: 24px;
     font-weight: 700;
   }
+
   &__phone {
     margin-top: 35px;
   }
+
   &__hot__phone {
     margin-top: 50px;
   }
+
   &__hot__description {
     font-size: 14px;
     font-weight: 400;
   }
+
   &__email {
     font-family: $font-openSans-semi;
     font-size: 16px;
     font-weight: 400;
     margin-top: 10px;
   }
+
   &__logo {
     display: none;
   }
 }
+
 //Footer__Stuff
 .stuff {
-  opacity: 0.66;
   color: $white;
   font-size: 14px;
   font-weight: 400;
   padding: 25px 0 20px;
+
+  &__rights {
+    opacity: 0.66;
+  }
+
   &__rules {
     margin-top: 10px;
+    opacity: 0.66;
+
+    & a {
+      color: $white;
+    }
   }
+
   &__map {
     margin-top: 10px;
+    opacity: 0.66;
+
+    & a {
+      color: $white;
+    }
   }
 }
