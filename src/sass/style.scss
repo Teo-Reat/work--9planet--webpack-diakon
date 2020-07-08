@@ -14,8 +14,7 @@
 @import "globals";
 
 //Plugin for style "select" tag
-@import "formstyler";
-@import "formstyler_theme";
+@import "nice-select";
 
 //Mobile version styles
 @import "mobile";
@@ -25,6 +24,9 @@
 
 //Small desktop version style
 @import "small_desktop";
+
+//Medium desktop style
+@import "medium_desktop";
 
 //Classes for all project
 @import "atomic";

@@ -1,4 +1,131 @@
 @media (min-width: 1410px) {
+  //Header fixed
+  .fixed {
+    min-height: unset;
+    transition: .5s;
+    height: 65px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+    & .header {
+      &__wrapper {
+        position: relative;
+      }
+      &__logo {
+        margin: 0;
+        & img {
+          margin-bottom: 10px;
+        }
+      }
+
+      &__hot-line {
+        position: relative;
+        margin-top: -200px;
+        transition: 1s;
+      }
+      &__work-time {
+        position: relative;
+        margin-top: -200px;
+        transition: 1s;
+      }
+      &__user {
+        transition: 1.5s;
+        margin-right: -195px;
+        & span {
+          display: none;
+        }
+      }
+      &__search-language__wrapper {
+        margin-left: 20px;
+      }
+      &__language {
+        margin-bottom: 10px;
+        transition: .5s;
+      }
+    }
+    & .navigation {
+      position: absolute;
+      width: 900px;
+      top: 0;
+      left: calc(50% - 420px);
+      transition: .5s;
+      background: $white;
+      &__list {
+        transition: .5s;
+      }
+      &__products__wrapper {
+        & ul {
+          justify-content: center;
+        }
+      }
+    }
+    & .search__results {
+      z-index: 56;
+      left: -100%;
+      top: 100px;
+      background: $white;
+    }
+  }
+
+  //Search form
+  .search {
+    &__form {
+      &__wrapper {
+        max-width: 1170px;
+      }
+    }
+    //Search results block
+    &__results {
+      &__wrapper {
+        max-width: 1170px;
+      }
+    }
+  }
+
+  //Navigation Desktops
+  .navigation {
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    &__products__wrapper {
+
+      & .products__item {
+        text-align: left;
+        margin-top: 20px;
+
+        & a {
+          display: flex;
+        }
+
+        &__description {
+          align-self: center;
+        }
+
+        & ul {
+          justify-content: start;
+        }
+      }
+    }
+  }
+
+  //Main__Prime
+  .prime {
+    &__first,
+    &__second,
+    &__third {
+      &__new {
+        margin-left: 0;
+      }
+      &__title {
+        margin-left: 0;
+      }
+      &__description {
+        margin-left: 60px;
+      }
+    }
+  }
+
   //Main__News
   .news {
     &__actions {

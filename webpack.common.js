@@ -1,5 +1,6 @@
 let path = require("path");
 let HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -8,6 +9,16 @@ module.exports = {
 			"./src/sass/style.scss"
 		]
 	},
+	plugins: [
+		new CopyPlugin({
+			patterns: [
+				{ from: 'src/assets/images/map', to: 'images' }
+			],
+			options: {
+				concurrency: 100,
+			},
+		}),
+	],
 	module: {
 		rules: [
 			{

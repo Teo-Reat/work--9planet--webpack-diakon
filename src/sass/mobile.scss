@@ -108,11 +108,10 @@
 .search {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -100%;
   z-index: 50;
   width: 100%;
   box-sizing: border-box;
-  display: none;
   overflow: hidden;
 
   &__form {
@@ -180,12 +179,16 @@
   }
   //Search results block
   &__results {
+    position: absolute;
+    top: 59px;
+    left: -100%;
     min-width: 100%;
     &__wrapper {
       background: #eef5f9;
     }
     &__list {
       padding: 0 10px 0;
+      width: 100vw;
     }
     &__item {
       &_active {
@@ -409,6 +412,7 @@
   }
 }
 
+//Products Icons
 .icon-ico_1,
 .icon-ico_2,
 .icon-ico_3,
@@ -655,18 +659,29 @@
   }
 
   &__select {
-    width: 100%;
-
-    &__label {
-      margin-top: 25px;
-      display: block;
+    border-radius: 0;
+    background: #f1f7fc;
+    & .list {
+      border-radius: 0;
+      & li {
+        position: relative;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          background: #e9eff2;
+          height: 1px;
+          left: 18px;
+          right: 18px;
+        }
+      }
     }
   }
 
   &__map {
-    width: 100%;
-    min-height: 742px;
-    margin-top: 35px;
+    //width: 900px;
+    min-height: 500px;
+    margin: 35px auto;
   }
 }
 

@@ -16,3 +16,58 @@
     box-shadow: none;
   }
 }
+
+.mark__content__big {
+  color: #404040;
+  font-size: 37px;
+  font-weight: 400;
+}
+
+.mark__content__medium {
+  color: #404040;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 55;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: $white;
+}
+
+.fixed__results {
+  position: fixed;
+}
+
+//Balloon style
+.balloon {
+  &__header {
+    font-size: 24px;
+    font-weight: 700;
+    color: $black;
+    padding: 30px 0 20px;
+    border-bottom: 1px solid #e6eaef;
+  }
+  &__body {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  &__address {
+    font-family: $font-openSans-semi;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  &__phone {
+
+  }
+  &__email {
+
+  }
+  &__work-time {
+
+  }
+}
+
