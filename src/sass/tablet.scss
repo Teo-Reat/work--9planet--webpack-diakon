@@ -1,13 +1,15 @@
 @media (min-width: 768px) {
   //Header
   .header {
-    min-height: 70px;
+    min-height: 136px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 5;
     &__logo {
       width: 152px;
       height: 40px;
+      margin: 15px 40px 0 15px;
     }
     &__hot-line {
       display: flex;
@@ -102,6 +104,7 @@
     //Search__Results
     &__results {
       top: 70px;
+      z-index: 60;
     }
   }
 
@@ -110,6 +113,8 @@
     display: block;
     border-top: 1px solid #cdcdcd;
     position: relative;
+    background: $white;
+    z-index: 5;
     width: 100%;
     &__list {
       display: flex;
@@ -117,6 +122,11 @@
       justify-content: center;
       &__item {
         margin-right: 20px;
+        &:hover > div {
+          visibility: visible;
+          transform: translateY(0);
+          opacity: 1;
+        }
         & > a {
           padding: 10px 0 11px;
           display: block;
@@ -124,15 +134,32 @@
           font-weight: 400;
           color: $black;
           transition: .5s;
+          position: relative;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 4px;
+            left: -5px;
+            right: -5px;
+            bottom: -2px;
+            z-index: 57;
+          }
           &:hover {
             color: $color-regular-blue;
             transition: .5s;
+          }
+          &:hover::after {
+            background: $color-regular-blue;
           }
         }
       }
     }
     &__products__wrapper {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all .5s ease;
       position: absolute;
       top: 100%;
       left: 0;
@@ -147,7 +174,6 @@
       & .products__item {
         text-align: center;
         margin-top: 10px;
-        min-width: 260px;
         & a {
           color: $black;
           transition: .5s;
@@ -162,7 +188,7 @@
 
   //Main
   .is-fixed {
-    margin-top: 154px;
+    margin-top: 136px;
   }
   //Main__Prime
   .prime {
@@ -235,6 +261,9 @@
   .network {
     &__title {
       text-align: center;
+    }
+    &__select {
+      margin-top: 0;
     }
   }
   //Footer

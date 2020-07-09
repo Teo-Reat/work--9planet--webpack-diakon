@@ -1,7 +1,7 @@
 @media (min-width: 1024px) {
   //Header
   .header {
-    min-height: 100px;
+    min-height: 122px;
     &__work-time {
       display: flex;
       color: #3c3c3b;
@@ -18,7 +18,7 @@
       }
     }
     &__language {
-      margin-bottom: 25px;
+      margin-bottom: 10px;
     }
   }
   //Search form
@@ -100,14 +100,14 @@
     &__products__wrapper {
       padding-bottom: 70px;
       & ul {
-        justify-content: start;
+        justify-content: center;
       }
     }
   }
 
   //Main
   .is-fixed {
-    margin-top: 141px;
+    margin-top: 122px;
   }
 
   //Main__Prime
@@ -239,6 +239,7 @@
       -moz-columns: 2;
       &__wrapper {
         margin-top: 20px;
+        display: block;
       }
       &__title {
         font-size: 16px;

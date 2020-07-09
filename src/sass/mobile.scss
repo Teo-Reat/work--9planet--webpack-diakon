@@ -1,6 +1,7 @@
 //Header
 .header {
   min-height: 59px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
 
   &__wrapper {
     align-items: baseline;
@@ -102,6 +103,7 @@
 //Navigation Desktops
 .navigation {
   display: none;
+  flex-shrink: 0;
 }
 
 //Search form
@@ -405,6 +407,8 @@
 
   &__item {
     margin-top: 30px;
+    display: block;
+    color: $black;
 
     &__description {
       font-size: 15px;
@@ -659,6 +663,7 @@
   }
 
   &__select {
+    margin-top: 10px;
     border-radius: 0;
     background: #f1f7fc;
     & .list {
@@ -717,7 +722,7 @@
     }
   }
 
-  &__submenu {
+  &__submenu__wrapper {
     display: none;
   }
 
