@@ -1,7 +1,7 @@
 @media (min-width: 1024px) {
   //Header
   .header {
-    min-height: 100px;
+    min-height: 141px;
     &__work-time {
       display: flex;
       color: #3c3c3b;
@@ -100,7 +100,10 @@
     &__products__wrapper {
       padding-bottom: 70px;
       & ul {
-        justify-content: start;
+        justify-content: center;
+      }
+      & .products__item {
+        min-width: 260px;
       }
     }
   }
@@ -239,6 +242,7 @@
       -moz-columns: 2;
       &__wrapper {
         margin-top: 20px;
+        display: block;
       }
       &__title {
         font-size: 16px;

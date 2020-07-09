@@ -101,7 +101,7 @@ $(document).ready(() => {
 
 	//Navigation products submenu
 	$('.js-navigation__products').click(() => {
-		$('.navigation__products__wrapper').slideToggle()
+		$('.navigation__products__wrapper').toggleClass('js-hover')
 	})
 
 	//Yandex map
@@ -169,6 +169,25 @@ $(document).ready(() => {
 				iconContentOffset: [25, 25],
 				iconContentLayout: BigIconContentLayout
 			});
+
+		myMap.behaviors
+			.disable(
+				[
+					'drag',
+					'rightMouseButtonMagnifier',
+					'scrollZoom'
+				]
+			)
+			// .enable('ruler');
+
+		myMap.controls
+			.remove('zoomControl')
+			.remove('geolocationControl')
+			.remove('trafficControl')
+			.remove('typeSelector')
+			// .remove('inputSearch')
+			.remove('fullscreenControl')
+			.remove('rulerControl')
 
 		myMap.geoObjects
 			.add(smallMark000)
