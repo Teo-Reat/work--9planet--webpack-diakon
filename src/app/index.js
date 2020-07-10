@@ -78,22 +78,14 @@ $(document).ready(() => {
 
 	//Search menu open
 	$('.js-header__search__button').click(() => {
-		$('.js-search').animate({
-			left: 0
-		})
-		$('.js-search__results').animate({
-			left: 0
-		})
+		$('.js-search').addClass('search__open')
+		$('.js-search__results').slideDown()
 	})
 
 	//Search menu close
 	$('.js-search__form__close').click(() => {
-		$('.js-search').animate({
-			left: '-100%'
-		})
-		$('.js-search__results').animate({
-			left: '-100%'
-		})
+		$('.js-search').removeClass('search__open')
+		$('.js-search__results').slideUp()
 	})
 
 	//Styles for "select" tag

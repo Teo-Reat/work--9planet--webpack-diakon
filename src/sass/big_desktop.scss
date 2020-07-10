@@ -1,24 +1,4 @@
 @media (min-width: 1680px) {
-  //Header fixed
-  .fixed {
-    & .header {
-      &__user {
-        margin-right: -250px;
-      }
-    }
-    & .navigation {
-      width: 1070px;
-      top: 0;
-      left: calc(50% - 520px);
-      &__list {
-        justify-content: space-between;
-        &__item {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-
   //Search form
   .search {
     &__form {
@@ -44,6 +24,22 @@
     }
   }
 
+  //Navigation
+  .navigation {
+    &__list {
+      &__item {
+        & a {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  //Main
+  .is-fixed {
+    //margin-top: 132px;
+  }
+
   //Main__Prime
   .prime {
     &__slick-next {
@@ -51,6 +47,21 @@
     }
     &__slick-prev {
       left: 5%;
+    }
+  }
+
+  //Header fixed
+  .fixed {
+    & .header {
+      &__user {
+        margin-right: -385px;
+      }
+    }
+    & .navigation {
+      &__list {
+        justify-content: space-between;
+        padding-right: 130px;
+      }
     }
   }
 }

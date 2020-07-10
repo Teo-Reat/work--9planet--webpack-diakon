@@ -1,20 +1,21 @@
 @media (min-width: 768px) {
   //Header
   .header {
-    min-height: 136px;
+    min-height: 160px;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     z-index: 5;
     &__logo {
       width: 152px;
       height: 40px;
-      margin: 15px 40px 0 15px;
+      margin: 17px 40px 17px 0;
+      transition: .3s;
     }
     &__hot-line {
       display: flex;
       flex-direction: column;
       align-self: center;
+      transition: .3s;
       &__phone {
         color: #3c3c3b;
         font-size: 24px;
@@ -29,6 +30,7 @@
     &__user {
       display: flex;
       align-self: center;
+      transition: .3s;
       & button {
         color: $color-regular-blue;
         display: flex;
@@ -39,6 +41,7 @@
         font-size: 14px;
         font-weight: 400;
         margin-top: 1px;
+        transition: .3s;
       }
     }
     & .icon-lk {
@@ -74,7 +77,9 @@
   }
   //Search form
   .search {
-
+    &__open {
+      width: 500px;
+    }
     &__form {
       &__input {
         min-height: 74px;
@@ -105,21 +110,21 @@
     &__results {
       top: 70px;
       z-index: 60;
+      min-width: unset;
+      width: 500px;
     }
   }
 
   //Navigation Desktops
   .navigation {
     display: block;
-    border-top: 1px solid #cdcdcd;
-    position: relative;
-    background: $white;
-    z-index: 5;
+    transition: .3s;
     width: 100%;
     &__list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      transition: .3s;
       &__item {
         margin-right: 20px;
         &:hover > div {
@@ -133,7 +138,7 @@
           font-size: 16px;
           font-weight: 400;
           color: $black;
-          transition: .5s;
+          transition: .3s;
           position: relative;
           &::after {
             content: '';
@@ -147,7 +152,7 @@
           }
           &:hover {
             color: $color-regular-blue;
-            transition: .5s;
+            transition: .3s;
           }
           &:hover::after {
             background: $color-regular-blue;
@@ -176,10 +181,10 @@
         margin-top: 10px;
         & a {
           color: $black;
-          transition: .5s;
+          transition: .3s;
           &:hover {
             color: $color-regular-blue;
-            transition: .5s;
+            transition: .3s;
           }
         }
       }
@@ -188,13 +193,11 @@
 
   //Main
   .is-fixed {
-    margin-top: 136px;
+    margin-top: 154px;
   }
   //Main__Prime
   .prime {
-    &__first__new,
-    &__second__new,
-    &__third__new {
+    &__slider__item {
       font-size: 12px;
       font-weight: 700;
     }
@@ -214,7 +217,7 @@
       z-index: 10;
       width: 52px;
       height: 52px;
-      transition: .5s;
+      transition: .3s;
       outline: transparent;
       & svg {
         width: 52px;
@@ -223,7 +226,7 @@
       &:hover {
         background-color: $color-heavy-blue;
         opacity: .3;
-        transition: .5s;
+        transition: .3s;
       }
     }
     &__slick-next {
@@ -270,6 +273,64 @@
   .stuff {
     &__wrapper {
       text-align: center;
+    }
+  }
+
+  //Fixed header style
+  .fixed {
+    min-height: 100px;
+    //Header
+    .header {
+      transition: .3s;
+      &__wrapper {
+        align-items: unset;
+      }
+      &__logo {
+        width: 91px;
+        transition: .3s;
+        margin: 12px 0 5px;
+      }
+      &__hot-line {
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+        transform: translateX(30px);
+      }
+      &__user {
+        margin-right: -360px;
+        margin-bottom: -90px;
+        transition: .3s;
+        & span {
+          visibility: hidden;
+          opacity: 0;
+          transform: translateX(30px);
+          transition: .3s;
+        }
+      }
+      &__search-language__wrapper {
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+    }
+    & .navigation {
+      transition: .3s;
+      height: 0;
+      &__list {
+        margin-top: -70px;
+        padding: 0 70px 0 100px;
+        transition: .3s;
+        &__item {
+          margin: 0 10px;
+          &:hover > div {
+            visibility: visible;
+            transform: translateY(0);
+            opacity: 1;
+          }
+          & > a {
+            padding: 4px 0 6px;
+          }
+        }
+      }
     }
   }
 }

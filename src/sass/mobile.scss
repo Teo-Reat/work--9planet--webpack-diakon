@@ -43,15 +43,18 @@
     &__button {
       outline: transparent;
       fill: $black;
-      transition: .5s;
+      transition: .3s;
+
       &:hover {
         fill: $color-regular-green;
-        transition: .5s;
+        transition: .3s;
       }
+
       &:active {
         fill: $color-regular-green;
       }
     }
+
     & .icon-search {
       width: 18px;
       height: 18px;
@@ -74,6 +77,7 @@
 
   &__menu {
     align-self: center;
+
     &__btn {
       height: 22px;
       width: 22px;
@@ -110,18 +114,25 @@
 .search {
   position: absolute;
   top: 0;
-  left: -100%;
+  right: 0;
   z-index: 50;
-  width: 100%;
+  width: 0;
   box-sizing: border-box;
   overflow: hidden;
+  transition: .3s;
+
+  &__open {
+    transition: .3s;
+    width: 100%;
+  }
 
   &__form {
     display: flex;
     background-color: #eef5f9;
     border-bottom: 1px solid #fbfcfd;
+
     &__input {
-      min-height: 59px;
+      min-height: 60px;
       width: 100%;
       display: block;
       border: none;
@@ -130,26 +141,30 @@
       font-size: 14px;
       background: transparent;
       outline: transparent;
+
       &__wrapper {
         width: 100%;
       }
     }
 
     &__button {
-      width: 59px;
-      height: 59px;
+      width: 60px;
+      height: 60px;
       flex-shrink: 0;
       fill: $black;
       position: relative;
       outline: transparent;
-      transition: .5s;
+      transition: .3s;
+
       &:hover {
         fill: $color-regular-green;
-        transition: .5s;
+        transition: .3s;
       }
+
       &:active {
         fill: $color-regular-green;
       }
+
       &::before {
         content: '';
         display: block;
@@ -168,10 +183,11 @@
     }
 
     &__close {
-      width: 59px;
-      height: 59px;
+      width: 60px;
+      height: 60px;
       flex-shrink: 0;
       outline: transparent;
+
       & svg {
         height: 18px;
         width: 18px;
@@ -179,42 +195,55 @@
       }
     }
   }
+
   //Search results block
   &__results {
+    display: none;
     position: absolute;
     top: 59px;
-    left: -100%;
+    right: 0;
     min-width: 100%;
+
     &__wrapper {
       background: #eef5f9;
     }
+
     &__list {
       padding: 0 10px 0;
       width: 100vw;
     }
+
     &__item {
       &_active {
         font-weight: 700;
       }
+
       & a {
         color: black;
         display: block;
         padding: 15px 0;
         font-size: 15px;
         font-weight: 400;
+        transition: .3s;
+
         &:hover {
           color: $color-regular-blue;
+          transition: .3s;
         }
       }
     }
+
     &__button {
       width: 100%;
       padding: 8px 0 10px;
       background-color: #dbe3e8;
       font-size: 14px;
       font-weight: 400;
+      transition: .3s;
+
       &:hover {
         background: $color-regular-green;
+        transition: .3s;
       }
     }
   }
@@ -307,53 +336,60 @@
 
 //Main__Prime
 .prime {
+  position: relative;
+
   &__slider {
     position: relative;
+
+    &__item {
+      height: 500px;
+    }
 
     &__image {
       display: none;
     }
   }
 
-  &__first,
-  &__second,
-  &__third {
-    background: $color-heavy-blue url("../assets/images/bg-prime-1.png") center center;
-    background-size: cover;
-    min-height: 499px;
-
-    &__new {
-      padding: 5px 10px 8px;
-      background: $color-regular-green;
-      margin-top: 49px;
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 700;
-    }
-
-    &__title {
-      margin-top: 23px;
-      font-size: 28px;
-      font-weight: 700;
-      line-height: 34px;
-    }
-
-    &__description {
-      margin-top: 23px;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-    }
+  &__new {
+    padding: 5px 10px 8px;
+    background: $color-regular-green;
+    margin-top: 49px;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
   }
 
-  &__second {
-    background: $color-heavy-blue url("../assets/images/bg-prime-2.png") center center;
+  &__title {
+    margin-top: 23px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
   }
 
-  &__third {
-    background: $color-heavy-blue url("../assets/images/bg-prime-1.png") right center;
+  &__description {
+    margin-top: 23px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }
+
 
 //Slick settings
 .prime .slick-dots,
@@ -436,10 +472,26 @@
   background: $color-light-blue;
   padding: 70px 10px 65px;
 
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
   &__item {
     position: relative;
     padding: 0;
     margin-top: 15px;
+
     &:nth-child(1),
     &:nth-child(3),
     &:nth-child(4) {
@@ -449,11 +501,12 @@
         opacity: .5;
         top: 172px;
         z-index: 1;
-        transition: .5s;
+        transition: .3s;
       }
+
       &:hover::after {
         top: 0;
-        transition: .5s;
+        transition: .3s;
       }
     }
 
@@ -463,8 +516,6 @@
       padding-bottom: 30px;
       position: relative;
       z-index: 5;
-
-
     }
 
     &__billet {
@@ -505,12 +556,13 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 22px;
-      padding: 0 10px 0 30px;
+      padding: 0 30px 0 30px;
+      display: block;
+      color: $white;
     }
   }
 
   &__company {
-    background: $color-heavy-blue url("../assets/images/urology.jpg") center center;
     color: $white;
 
     & .news__item__billet {
@@ -532,6 +584,7 @@
     & > .news__item__title {
       padding-bottom: 30px;
       border-bottom: 1px solid rgba(115, 164, 184, .32);
+      color: $black;
 
       &:last-child {
         border-bottom: none;
@@ -546,7 +599,6 @@
 
   &__events {
     color: $white;
-    background: $color-heavy-blue url("../assets/images/atm.jpg") center center;
 
     & .news__item__billet {
       background: $color-light-blue;
@@ -560,7 +612,6 @@
   }
 
   &__webinars {
-    background: $color-heavy-blue url("../assets/images/cystatin.jpg") center center;
     color: $white;
 
     & .news__item__billet {
@@ -577,6 +628,10 @@
   &__actions {
     background: $white;
     position: relative;
+
+    & .news__item__title {
+      color: $black;
+    }
 
     &::before {
       content: '';
@@ -641,6 +696,12 @@
     padding: 34px 37px 36px 30px;
     box-shadow: 0 3px 7px rgba(62, 125, 177, 0.08);
     border-bottom: 1px solid rgba(115, 164, 184, .32);
+    transition: .3s;
+
+    &:hover {
+      background: #eef8fd;
+      transition: .3s;
+    }
   }
 
   &__subitem__description {
@@ -650,6 +711,7 @@
     font-weight: 600;
     display: flex;
     align-items: center;
+    color: $black;
   }
 }
 
@@ -666,10 +728,13 @@
     margin-top: 10px;
     border-radius: 0;
     background: #f1f7fc;
+
     & .list {
       border-radius: 0;
+
       & li {
         position: relative;
+
         &::after {
           content: '';
           display: block;
