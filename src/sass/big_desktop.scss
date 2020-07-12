@@ -42,6 +42,18 @@
 
   //Main__Prime
   .prime {
+
+    &__title {
+      font-size: 42px;
+      line-height: 52px;
+    }
+
+    &__description {
+      margin-top: 38px;
+      font-size: 18px;
+      line-height: 32px;
+    }
+
     &__slick-next {
       right: 5%;
     }

@@ -22,6 +22,13 @@
       flex-wrap: nowrap;
       justify-content: space-between;
       background: $white;
+      &__item {
+        & > a {
+          &::after {
+            bottom: -14px;
+          }
+        }
+      }
     }
 
     &__products__wrapper {
@@ -53,11 +60,13 @@
 
   //Main__Prime
   .prime {
+
     &__slider__item {
       min-height: 600px;
     }
     &__new {
       margin-left: 0;
+      margin-top: 125px;
     }
 
     &__title {
@@ -100,6 +109,11 @@
 
         &__item {
           margin: 0 5px;
+          & > a {
+            &::after {
+              bottom: -20px;
+            }
+          }
         }
       }
     }

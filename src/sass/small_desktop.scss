@@ -143,6 +143,7 @@
   .prime {
     &__new {
       margin-left: 70px;
+      font-size: 12px;
     }
 
     &__title {
@@ -393,6 +394,11 @@
 
     //Fixed navigation
     .navigation {
+      &__products {
+        &__wrapper {
+          top: 65px;
+        }
+      }
       &__list {
         flex-wrap: wrap;
         padding: 0 110px 0 110px;

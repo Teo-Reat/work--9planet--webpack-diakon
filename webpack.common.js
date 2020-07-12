@@ -4,7 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: {
-		app: [
+		style: [
 			"./src/app/index.js",
 			"./src/sass/style.scss"
 		]

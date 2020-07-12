@@ -129,7 +129,7 @@
         margin-right: 20px;
         &:hover > div {
           visibility: visible;
-          transform: translateY(0);
+          //transform: translateY(0);
           opacity: 1;
         }
         & > a {
@@ -147,7 +147,7 @@
             height: 4px;
             left: -5px;
             right: -5px;
-            bottom: -2px;
+            bottom: 0;
             z-index: 57;
           }
           &:hover {
@@ -163,10 +163,10 @@
     &__products__wrapper {
       visibility: hidden;
       opacity: 0;
-      transform: translateY(-10px);
+      //transform: translateY(-10px);
       transition: all .5s ease;
       position: absolute;
-      top: 100%;
+      top: 160px;
       left: 0;
       right: 0;
       z-index: 10;
@@ -204,7 +204,7 @@
     &__slider {
       &__image {
         display: block;
-        margin-top: 60px;
+        margin-top: 40px;
         & img {
           width: 100%;
         }
@@ -294,7 +294,7 @@
         visibility: hidden;
         opacity: 0;
         transition: .3s;
-        transform: translateX(30px);
+        margin-top: -10px;
       }
       &__user {
         margin-right: -360px;
@@ -303,7 +303,7 @@
         & span {
           visibility: hidden;
           opacity: 0;
-          transform: translateX(30px);
+          margin-top: -10px;
           transition: .3s;
         }
       }
@@ -315,6 +315,11 @@
     & .navigation {
       transition: .3s;
       height: 0;
+      &__products {
+        &__wrapper {
+          top: 70px;
+        }
+      }
       &__list {
         margin-top: -70px;
         padding: 0 70px 0 100px;
@@ -323,7 +328,7 @@
           margin: 0 10px;
           &:hover > div {
             visibility: visible;
-            transform: translateY(0);
+            //transform: translateY(0);
             opacity: 1;
           }
           & > a {

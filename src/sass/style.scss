@@ -1,11 +1,11 @@
 //Normalize file, reset styles for browsers
-@import "normalize";
+@import "_normalize.scss";
 
 //File with fonts
 @import "fonts";
 
-//Bootstrap-grid file (changed)
-@import "grid";
+//Bootstrap-grid file
+@import "grid.scss";
 
 //Variables and mixins
 @import "variables";
