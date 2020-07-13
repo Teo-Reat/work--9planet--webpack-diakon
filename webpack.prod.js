@@ -10,7 +10,7 @@ let HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = merge(common, {
 	mode: "production",
 	output: {
-		filename: "[name].js",
+		filename: "js/script.js",
 		path: path.resolve(__dirname, "dist")
 	},
 	optimization: {
@@ -28,7 +28,7 @@ module.exports = merge(common, {
 		]
 	},
 	plugins: [
-		new MiniCssExtractPlugin({ filename: "[name].css" }),
+		new MiniCssExtractPlugin({ filename: "css/[name].css" }),
 		new CleanWebpackPlugin()
 	],
 	module: {

@@ -1,25 +1,17 @@
 @media (min-width: 1680px) {
   //Search form
   .search {
+    margin-right: -705px;
     &__form {
       &__wrapper {
-        max-width: 1410px;
+        //max-width: 1410px;
       }
     }
     //Search results block
     &__results {
+      margin-right: -705px;
       &__wrapper {
-        max-width: 1410px;
-      }
-    }
-  }
-
-  .navigation {
-    &__list {
-      flex-wrap: nowrap;
-      justify-content: start;
-      &__item {
-        margin-right: 25px;
+        //max-width: 1410px;
       }
     }
   }
@@ -27,7 +19,10 @@
   //Navigation
   .navigation {
     &__list {
+      flex-wrap: nowrap;
+      justify-content: start;
       &__item {
+        margin-right: 25px;
         & a {
           white-space: nowrap;
         }
@@ -59,6 +54,15 @@
     }
     &__slick-prev {
       left: 5%;
+    }
+  }
+
+  //News
+  .news {
+    &__actions {
+      & .news__item__title {
+        padding-bottom: 95px;
+      }
     }
   }
 

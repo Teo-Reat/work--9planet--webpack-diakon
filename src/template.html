@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diakon</title>
+    <!--    Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!--    Favicon end-->
 </head>
 <body>
 <!--Defs for svg-->
@@ -767,17 +778,15 @@
             <path d="M19.488 19.008c-0.007 0-0.015 0-0.024 0-0.181 0-0.346-0.067-0.473-0.177l0.001 0.001-3.568-2.832c-0.176-0.145-0.288-0.363-0.288-0.607 0 0 0-0.001 0-0.001v0-7.696c0-0.442 0.358-0.8 0.8-0.8v0c0.438 0.009 0.791 0.362 0.8 0.799v7.233l3.2 2.672c0.172 0.148 0.28 0.365 0.28 0.608 0 0.439-0.354 0.796-0.792 0.8v0z"></path>
         </symbol>
         <symbol id="icon-time1" viewBox="0 0 32 32">
-            <path fill="#909090" style="fill: var(--color12, #909090)"
-                  d="M16 32c-8.837 0-16-7.163-16-16s7.163-16 16-16c8.837 0 16 7.163 16 16v0c0 8.837-7.163 16-16 16v0zM16 2.667c-7.364 0-13.333 5.97-13.333 13.333s5.97 13.333 13.333 13.333c7.364 0 13.333-5.97 13.333-13.333v0c-0.010-7.36-5.974-13.323-13.332-13.333h-0.001z"></path>
-            <path fill="#909090" style="fill: var(--color12, #909090)"
-                  d="M22.898 17.831h-8.231v-12.32h2.667v9.653h5.564v2.667z"></path>
+            <path d="M16 32c-8.837 0-16-7.163-16-16s7.163-16 16-16c8.837 0 16 7.163 16 16v0c0 8.837-7.163 16-16 16v0zM16 2.667c-7.364 0-13.333 5.97-13.333 13.333s5.97 13.333 13.333 13.333c7.364 0 13.333-5.97 13.333-13.333v0c-0.010-7.36-5.974-13.323-13.332-13.333h-0.001z"></path>
+            <path d="M22.898 17.831h-8.231v-12.32h2.667v9.653h5.564v2.667z"></path>
         </symbol>
     </defs>
 </svg>
 
 <!--Header (headers, mobile menu, search block, navigation-->
 <header class="header js-fixed">
-    <section class="container">
+    <section class="container header__top">
         <div class="row">
             <div class="col-12 header__wrapper">
                 <div class="header__logo">
@@ -812,14 +821,45 @@
                                 <use xlink:href="#icon-search"></use>
                             </svg>
                         </button>
+                        <div class="js-search search">
+                            <form class="search__form">
+                                <div class="search__input__wrapper">
+                                    <label for="search__input"></label>
+                                    <input type="text" class="search__input" id="search__input">
+                                </div>
+                                <button type="button" class="search__button">
+                                    <svg class="icon icon-search">
+                                        <use xlink:href="#icon-search"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="js-search__close search__close">
+                                    <svg class="icon icon-close">
+                                        <use xlink:href="#icon-close"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="header__language">
+                    <div class="js-header__language header__language">
                         <button>
                             <span class="header__language__item">eng</span>
                             <svg class="icon icon-arrow_down">
                                 <use xlink:href="#icon-arrow_down"></use>
                             </svg>
                         </button>
+                        <div class="js-language language">
+                            <ul class="language__list">
+                                <li class="language__list__item">
+                                    <a href="#">rus</a>
+                                </li>
+                                <li class="language__list__item language__list__item-active">
+                                    <a>eng</a>
+                                </li>
+                                <li class="language__list__item">
+                                    <a href="#">chi</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <nav class="header__menu">
@@ -954,29 +994,6 @@
                 </a>
             </li>
         </ul>
-    </section>
-    <section class="js-search search">
-        <div class="search__form__wrapper">
-            <form class="search__form">
-                <div class="search__form__input__wrapper">
-                    <label for="search"></label>
-                    <input type="text"
-                           class="js-search__form__input search__form__input"
-                           name="search"
-                           id="search">
-                </div>
-                <button class="js-search__form__button search__form__button" type="submit">
-                    <svg class="icon icon-search">
-                        <use xlink:href="#icon-search"></use>
-                    </svg>
-                </button>
-                <button class="js-search__form__close search__form__close" type="button">
-                    <svg class="icon icon-close">
-                        <use xlink:href="#icon-close"></use>
-                    </svg>
-                </button>
-            </form>
-        </div>
     </section>
     <nav class="navigation">
         <div class="container">
@@ -1346,14 +1363,46 @@
     <section class="news">
         <div class="container">
             <div class="row news__wrapper">
-                <div class="news__item news__company col-12 col-md-6 col-lg-4">
-                    <div class="news__bg">
-                        <img src="assets/images/urology.jpg" alt="">
-                    </div>
-                    <div class="news__item__billet">
-                        НОВОСТИ КОМПАНИИ
-                    </div>
-                    <div class="news__item__description">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="#" class="news__item news__company">
+                        <div class="news__bg">
+                            <img src="assets/images/urology.jpg" alt="">
+                        </div>
+                        <div class="news__item__billet">
+                            НОВОСТИ КОМПАНИИ
+                        </div>
+                        <div class="news__item__description">
+                            <div class="news__item__date">
+                                <svg class="icon icon-time">
+                                    <use xlink:href="#icon-time"></use>
+                                </svg>
+                                <span>11 февраля</span>
+                            </div>
+                            <span class="news__item__title">
+                                Цистатин С (Cystatin C FS) -
+                                новый золотой стандарт и
+                                маркер в
+                                иммунотурбидиметрии
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="news__item news__industry">
+                        <div class="news__item__billet">
+                            НОВОСТИ ОТРАСЛИ
+                        </div>
+                        <div class="news__item__date">
+                            <svg class="icon icon-time">
+                                <use xlink:href="#icon-time"></use>
+                            </svg>
+                            <span>20 марта</span>
+                        </div>
+                        <a href="#" class="news__item__title">
+                            Пресепсин будет внесен в
+                            стандарты оказания
+                            медицинской помощи
+                        </a>
                         <div class="news__item__date">
                             <svg class="icon icon-time">
                                 <use xlink:href="#icon-time"></use>
@@ -1361,141 +1410,124 @@
                             <span>11 февраля</span>
                         </div>
                         <a href="#" class="news__item__title">
-                            Цистатин С (Cystatin C FS) -
-                            новый золотой стандарт и
-                            маркер в
-                            иммунотурбидиметрии
+                            Плохой Х-ЛПНП ― это просто
+                            раздутый миф
                         </a>
                     </div>
                 </div>
-                <div class="news__item news__industry col-12 col-md-6 col-lg-4">
-                    <div class="news__item__billet">
-                        НОВОСТИ ОТРАСЛИ
-                    </div>
-                    <div class="news__item__date">
-                        <svg class="icon icon-time">
-                            <use xlink:href="#icon-time"></use>
-                        </svg>
-                        <span>20 марта</span>
-                    </div>
-                    <a href="#" class="news__item__title">
-                        Пресепсин будет внесен в
-                        стандарты оказания
-                        медицинской помощи
-                    </a>
-                    <div class="news__item__date">
-                        <svg class="icon icon-time">
-                            <use xlink:href="#icon-time"></use>
-                        </svg>
-                        <span>11 февраля</span>
-                    </div>
-                    <a href="#" class="news__item__title">
-                        Плохой Х-ЛПНП ― это просто
-                        раздутый миф
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a class="news__item news__events" href="#">
+                        <div class="news__bg">
+                            <img src="assets/images/atm.jpg" alt="">
+                        </div>
+                        <div class="news__item__billet">
+                            события
+                        </div>
+                        <div class="news__item__description">
+                            <div class="news__item__date">
+                                <svg class="icon icon-time">
+                                    <use xlink:href="#icon-time"></use>
+                                </svg>
+                                <span>7 апреля</span>
+                            </div>
+                            <span class="news__item__title">
+                                Алгоритмы экспресс
+                                диагностики критических
+                                состояний: анализатор
+                                PATHFAST
+                            </span>
+                        </div>
                     </a>
                 </div>
-                <div class="news__item news__events col-12 col-md-6 col-lg-4">
-                    <div class="news__bg">
-                        <img src="assets/images/atm.jpg" alt="">
-                    </div>
-                    <div class="news__item__billet">
-                        события
-                    </div>
-                    <div class="news__item__description">
-                        <div class="news__item__date">
-                            <svg class="icon icon-time">
-                                <use xlink:href="#icon-time"></use>
-                            </svg>
-                            <span>7 апреля</span>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a class="news__item news__webinars" href="#">
+                        <div class="news__bg">
+                            <img src="assets/images/cystatin.jpg" alt="">
                         </div>
-                        <a href="#" class="news__item__title">
-                            Алгоритмы экспресс
-                            диагностики критических
-                            состояний: анализатор
-                            PATHFAST
-                        </a>
-                    </div>
+                        <div class="news__item__billet">
+                            вебинары
+                        </div>
+                        <div class="news__item__description">
+                            <div class="news__item__date">
+                                <svg class="icon icon-time">
+                                    <use xlink:href="#icon-time"></use>
+                                </svg>
+                                <span>11 февраля</span>
+                            </div>
+                            <span class="news__item__title">
+                                Цистатин С (Cystatin C FS) -
+                                новый золотой стандарт и
+                                маркер в
+                                иммунотурбидиметрии
+                            </span>
+                        </div>
+                    </a>
                 </div>
-                <div class="news__item news__webinars col-12 col-md-6 col-lg-4">
-                    <div class="news__bg">
-                        <img src="assets/images/cystatin.jpg" alt="">
-                    </div>
-                    <div class="news__item__billet">
-                        вебинары
-                    </div>
-                    <div class="news__item__description">
-                        <div class="news__item__date">
-                            <svg class="icon icon-time">
-                                <use xlink:href="#icon-time"></use>
-                            </svg>
-                            <span>11 февраля</span>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="news__item news__actions">
+                        <div class="news__actions__brand">
+                            <img src="assets/images/conda.jpg" alt="Conda">
                         </div>
-                        <a href="#" class="news__item__title">
-                            Цистатин С (Cystatin C FS) -
-                            новый золотой стандарт и
-                            маркер в
-                            иммунотурбидиметрии
-                        </a>
-                    </div>
-                </div>
-                <div class="news__item news__actions col-12 col-md-6 col-lg-4">
-                    <div class="news__item__billet">
-                        акции
-                    </div>
-                    <div class="news__actions__slider">
-                        <div class="news__actions__slider__item">
-                            <div class="news__item__image">
-                                <img src="assets/images/pronadisa.jpg" alt="Conda">
-                            </div>
-                            <div class="news__item__title">
-                                Распродажа продукции
-                                испанской компании CONDA
-                                «Pronadisa»
-                            </div>
+                        <div class="news__item__billet">
+                            акции
                         </div>
-                        <div class="news__actions__slider__item">
-                            <div class="news__item__image">
-                                <img src="assets/images/pronadisa.jpg" alt="Conda">
+                        <div class="news__actions__slider">
+                            <div class="news__actions__slider__item">
+                                <a class="news__item__image" href="#">
+                                    <img src="assets/images/pronadisa.jpg" alt="Conda">
+                                </a>
+                                <a class="news__item__title" href="#">
+                                    Распродажа продукции
+                                    испанской компании CONDA
+                                    «Pronadisa»
+                                </a>
                             </div>
-                            <div class="news__item__title">
-                                Распродажа продукции
-                                испанской компании CONDA
-                                «Pronadisa»
+                            <div class="news__actions__slider__item">
+                                <a class="news__item__image" href="#">
+                                    <img src="assets/images/pronadisa.jpg" alt="Conda">
+                                </a>
+                                <a class="news__item__title" href="#">
+                                    Распродажа продукции
+                                    испанской компании CONDA
+                                    «Pronadisa»
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="news__item col-12 col-md-6 col-lg-4">
-                    <div class="news__item__wrapper">
-                        <div class="news__item__subitem">
-                            <a href="#" class="news__subitem__description">
-                                Библиотека
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="news__item">
+                        <div class="news__item__wrapper">
+                            <a class="news__item__subitem" href="#">
+                                <span class="news__subitem__description">
+                                    Библиотека
+                                </span>
+                                <div class="news__subitem__image">
+                                    <svg class="icon icon-block_1">
+                                        <use xlink:href="#icon-block_1"></use>
+                                    </svg>
+                                </div>
                             </a>
-                            <div class="news__subitem__image">
-                                <svg class="icon icon-block_1">
-                                    <use xlink:href="#icon-block_1"></use>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="news__item__subitem">
-                            <a href="#" class="news__subitem__description">
-                                Сервис
+                            <a class="news__item__subitem" href="#">
+                                <span class="news__subitem__description">
+                                    Сервис
+                                </span>
+                                <div class="news__subitem__image">
+                                    <svg class="icon icon-block_2">
+                                        <use xlink:href="#icon-block_2"></use>
+                                    </svg>
+                                </div>
                             </a>
-                            <div class="news__subitem__image">
-                                <svg class="icon icon-block_2">
-                                    <use xlink:href="#icon-block_2"></use>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="news__item__subitem">
-                            <a href="#" class="news__subitem__description">
-                                Вакансии
+                            <a class="news__item__subitem" href="#">
+                                <span class="news__subitem__description">
+                                    Вакансии
+                                </span>
+                                <div class="news__subitem__image">
+                                    <svg class="icon icon-block_3">
+                                        <use xlink:href="#icon-block_3"></use>
+                                    </svg>
+                                </div>
                             </a>
-                            <div class="news__subitem__image">
-                                <svg class="icon icon-block_3">
-                                    <use xlink:href="#icon-block_3"></use>
-                                </svg>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1506,7 +1538,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <h2 class="network__title">Дилерская сеть</h2>
+                    <div class="network__title__wrapper">
+                        <h2 class="network__title">Дилерская сеть</h2>
+                    </div>
                 </div>
                 <div class="col-12 col-md-5 ml-auto">
                     <label class="network__select__label" for="network__select"></label>
@@ -1532,7 +1566,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-8">
+                <div class="col-12 col-md-8 col-lg-8">
                     <div class="row">
                         <ul class="about__menu col-lg-4">
                             <li class="about__menu__item">
@@ -1561,46 +1595,43 @@
                             </li>
                             <li class="about__menu__item">
                                 <a href="#">Продукты</a>
+                                <ul class="about__submenu">
+                                    <li class="about__submenu__item">
+                                        <a href="#">Централизация</a>
+                                    </li>
+                                    <li class="about__submenu__item">
+                                        <a href="#">Гематология</a>
+                                    </li>
+                                    <li class="about__submenu__item">
+                                        <a href="#">Экспресс-диагностика</a>
+                                    </li>
+                                    <li class="about__submenu__item">
+                                        <a href="#">Иммунохимия</a>
+                                    </li>
+                                    <li class="about__submenu__item">
+                                        <a href="#">Преаналитика</a>
+                                    </li>
+                                    <li class="about__submenu__item">
+                                        <a href="#">Клиническая химия</a>
+                                    </li>
+                                    <li class="about__submenu__item">
+                                        <a href="#">Гемостаз</a>
+                                    </li>
+                                    <li class="about__submenu__item">
+                                        <a href="#">Анализ мочи</a>
+                                    </li>
+                                    <li class="about__submenu__item">
+                                        <a href="#">Иммуногематология</a>
+                                    </li>
+                                    <li class="about__submenu__item">
+                                        <a href="#">Микробиология</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
-                        <div class="about__submenu__wrapper col-lg-8">
-                            <div class="about__submenu__title">Продукты</div>
-                            <ul class="about__submenu">
-                                <li class="about__submenu__item">
-                                    <a href="#">Централизация</a>
-                                </li>
-                                <li class="about__submenu__item">
-                                    <a href="#">Гематология</a>
-                                </li>
-                                <li class="about__submenu__item">
-                                    <a href="#">Экспресс-диагностика</a>
-                                </li>
-                                <li class="about__submenu__item">
-                                    <a href="#">Иммунохимия</a>
-                                </li>
-                                <li class="about__submenu__item">
-                                    <a href="#">Преаналитика</a>
-                                </li>
-                                <li class="about__submenu__item">
-                                    <a href="#">Клиническая химия</a>
-                                </li>
-                                <li class="about__submenu__item">
-                                    <a href="#">Гемостаз</a>
-                                </li>
-                                <li class="about__submenu__item">
-                                    <a href="#">Анализ мочи</a>
-                                </li>
-                                <li class="about__submenu__item">
-                                    <a href="#">Иммуногематология</a>
-                                </li>
-                                <li class="about__submenu__item">
-                                    <a href="#">Микробиология</a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
-                <div class="about__contacts col-12 col-md-6 col-lg-4 col-xl-3 ml-auto">
+                <div class="about__contacts col-12 col-md-4 col-lg-4 col-xl-3 ml-auto">
                     <strong class="about__hot__phone">8 800 2006 339</strong>
                     <p class="about__hot__description">Телефон горячей линии </p>
                     <strong class="about__phone">+7 (495) 980 63 39</strong>
@@ -1637,7 +1668,7 @@
 
 <!--Search results block-->
 <section class="js-search__results search__results">
-    <div class="search__results__wrapper">
+    <div class="search__results__wrapper container">
         <ul class="search__results__list">
             <li class="search__results__item">
                 <a href="#">

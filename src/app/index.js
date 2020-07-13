@@ -3,7 +3,6 @@ require(`./jquery.nice-select`)
 import 'slick-carousel'
 
 
-
 $(document).ready(() => {
 	//Fixed menu
 	function fixed_menu() {
@@ -11,8 +10,7 @@ $(document).ready(() => {
 			$('.js-fixed').addClass('fixed');
 			$('.js-search__results').addClass('fixed__results');
 			$('.js-main').addClass('is-fixed');
-		}
-		else {
+		} else {
 			$('.js-fixed').removeClass('fixed');
 			$('.js-search__results').removeClass('fixed__results');
 			$('.js-main').removeClass('is-fixed');
@@ -79,13 +77,13 @@ $(document).ready(() => {
 	//Search menu open
 	$('.js-header__search__button').click(() => {
 		$('.js-search').addClass('search__open')
-		$('.js-search__results').slideDown()
+		$('.js-search__results').show()
 	})
 
 	//Search menu close
-	$('.js-search__form__close').click(() => {
+	$('.js-search__close').click(() => {
 		$('.js-search').removeClass('search__open')
-		$('.js-search__results').slideUp()
+		$('.js-search__results').hide()
 	})
 
 	//Styles for "select" tag
@@ -96,97 +94,12 @@ $(document).ready(() => {
 		$('.navigation__products__wrapper').toggleClass('js-hover')
 	})
 
-	//Yandex map
-	// ymaps.ready(function () {
-	// 	var myMap = new ymaps.Map('map', {
-	// 			center: [55.751574, 37.573856],
-	// 			zoom: 9
-	// 		}, {
-	// 			searchControlProvider: 'yandex#search'
-	// 		}),
-	//
-	// 		//Content in marks
-	// 		BigIconContentLayout = ymaps.templateLayoutFactory.createClass(
-	// 			'<div class="mark__content__big">$[properties.iconContent]</div>'
-	// 		),
-	// 		MediumIconContentLayout = ymaps.templateLayoutFactory.createClass(
-	// 			'<div class="mark__content__medium">$[properties.iconContent]</div>'
-	// 		),
-	//
-	// 		//Small mark
-	// 		smallMark000 = new ymaps.Placemark([55.596168, 37.523422], {
-	// 			hintContent: 'Это маленькая метка',
-	// 			balloonContent: 'Ясеневский лесопарк'
-	// 		}, {
-	// 			iconLayout: 'default#image',
-	// 			iconImageHref: 'images/mark-small.svg',
-	// 			iconImageSize: [39, 45],
-	// 			iconImageOffset: [-19.5, -45]
-	// 		}),
-	//
-	// 		//Medium mark
-	// 		mediumMark000 = new ymaps.Placemark([55.661574, 38.573856], {
-	// 			hintContent: 'Where is the small rum? ',
-	// 			balloonContent: 'Freebooters fall with endurance! ',
-	// 			iconContent: '7'
-	// 		}, {
-	// 			iconLayout: 'default#imageWithContent',
-	// 			iconImageHref: 'images/mark-big.svg',
-	// 			iconImageSize: [57, 67],
-	// 			iconImageOffset: [-27.5, -67],
-	// 			iconContentOffset: [23, 15],
-	// 			iconContentLayout: MediumIconContentLayout
-	// 		}),
-	//
-	// 		//Big mark
-	// 		bigMark000 = new ymaps.Placemark([55.661574, 37.573856], {
-	// 			balloonContentHeader: '<a href = "#" class="balloon__header">Медико-биологический \n' +
-	// 				'центр Фармалад</a>',
-	// 			balloonContentBody:
-	// 				'<div class="balloon__body">' +
-	// 					'<div class="balloon__address">г. Воронеж, ул. Правды, дом 26, офис 2</div>' +
-	// 					'<div class="balloon__phone">+7 (960) 138 89 76</div>' +
-	// 					'<div class="balloon__email">voronej@farm.ru</div>' +
-	// 					'<div class="balloon__work-time">пн-пт 9:00-18:00</div>' +
-	// 				'</div>',
-	// 			hintContent: 'Медицико-биологический \n' +
-	// 				'центр Фармалад',
-	// 			iconContent: '12'
-	// 		}, {
-	// 			//Options
-	// 			iconLayout: 'default#imageWithContent',
-	// 			iconImageHref: 'images/mark-big.svg',
-	// 			iconImageSize: [90, 108],
-	// 			iconImageOffset: [-45, -108],
-	// 			iconContentOffset: [25, 25],
-	// 			iconContentLayout: BigIconContentLayout
-	// 		});
-	//
-	// 	myMap.behaviors
-	// 		.disable(
-	// 			[
-	// 				'drag',
-	// 				'rightMouseButtonMagnifier',
-	// 				'scrollZoom'
-	// 			]
-	// 		)
-	// 		// .enable('ruler');
-	//
-	// 	myMap.controls
-	// 		.remove('zoomControl')
-	// 		.remove('geolocationControl')
-	// 		.remove('trafficControl')
-	// 		.remove('typeSelector')
-	// 		// .remove('inputSearch')
-	// 		.remove('fullscreenControl')
-	// 		.remove('rulerControl')
-	//
-	// 	myMap.geoObjects
-	// 		.add(smallMark000)
-	// 		.add(mediumMark000)
-	// 		.add(bigMark000);
-	// });
+	//Change language
+	$('.js-header__language').click(() => {
+		$('.js-language').slideToggle()
+	})
 
+	//Yandex map
 	$(function () {
 		if ($('#map').length) {
 			var markers = [
@@ -196,9 +109,9 @@ $(document).ready(() => {
 			]
 			var mapHeight = $('#map').height();
 
-			ymaps.ready(function() {
+			ymaps.ready(function () {
 
-				var map = new ymaps.Map ("map", {
+				var map = new ymaps.Map("map", {
 						center: [54.942092, 37.405220],
 						zoom: 6,
 						behaviors: ['default'],
@@ -227,14 +140,20 @@ $(document).ready(() => {
 
 
 				var MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
-					'<div class="popover">' +
-					'<div class="popover__arrow"></div>' +
-					'<div class="popover__inner">' +
-					'<a class="popover__close" href="#"><svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg></a>' +
-					'$[[options.contentLayout observeSize minWidth=300 maxWidth=366]]' +
-					'<span class="popover__tail"></span>' +
-					'</div>' +
-					'</div>', {
+					`
+<div class="popover">
+	<div class="popover__arrow"></div>
+	<div class="popover__inner">
+		<a class="popover__close" href="#">
+			<svg class="icon icon-close">
+				<use xlink:href="#icon-close"></use>
+			</svg>
+		</a>
+		$[[options.contentLayout observeSize minWidth=300 maxWidth=432]]
+		<span class="popover__tail"></span>
+	</div>
+</div>
+`, {
 						build: function () {
 							this.constructor.superclass.build.call(this);
 
@@ -254,7 +173,7 @@ $(document).ready(() => {
 						onSublayoutSizeChange: function () {
 							MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
 
-							if(!this._isElement(this._$element)) {
+							if (!this._isElement(this._$element)) {
 								return;
 							}
 
@@ -274,7 +193,7 @@ $(document).ready(() => {
 							this.events.fire('userclose');
 						},
 						getShape: function () {
-							if(!this._isElement(this._$element)) {
+							if (!this._isElement(this._$element)) {
 								return MyBalloonLayout.superclass.getShape.call(this);
 							}
 
@@ -318,29 +237,35 @@ $(document).ready(() => {
 					//   balloon__site = '<p class="partnerSite"><i class="fas fa-home"></i> <a href="//'+marker['SITE']+'" target="_blank" title="'+marker['NAME']+'">'+marker['SITE']+'</a></p>';
 					// }
 
-					var balloon = '<div class="ballon">'+
-						'<div class="ballon__head">'+
-						'<div class="baloon__logo">'+
-						'<img src="img/logo.svg" alt="Магазин в Серпухове" title="Магазин в Серпухове" />'+
-						'</div>'+
-						'<div class="ballon__name">Магазин в Серпухове</div>'+
-						'</div>'+
-						'<div class="baloon__body">'+
-						'<div class="baloon__line">'+
-						'<svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>'+
-						'<a href="tel:+7 (926) 047-32-22">+7 (926) 047-32-22</a>'+
-						'</div>'+
-						'<div class="baloon__line">'+
-						'<svg class="icon icon-worktime"><use xlink:href="#icon-worktime"></use></svg>'+
-						'<span>с 10:00 до 22:00</span>'+
-						'</div>'+
-						'<div class="baloon__line">'+
-						'<svg class="icon icon-address"><use xlink:href="#icon-address"></use></svg>'+
-						'<span>Московская область, город Серпухов, Московское шоссе, 55</span>'+
-						'</div>'+
-						'</div>'+
-						'</div>';
+					var balloon = `
 
+<div class="balloon">
+	<div class="balloon__header">
+		<div class="balloon__title">
+			<a href="#">Медико-биологический центр Фармалад</a>
+		</div>
+	</div>
+	<div class="balloon__body">
+		<div class="balloon__address">
+			<svg class="icon icon-mark"><use xlink:href="#icon-mark"></use></svg>
+			<span class="">г. Воронеж, ул. Правды, дом 26, офис 2</span>
+		</div>
+		<div class="balloon__phone">
+			<svg class="icon icon-tel"><use xlink:href="#icon-tel"></use></svg>
+			<a href="tel:+7 (926) 047-32-22" class="">+7 (926) 047-32-22</a>
+		</div>
+		<div class="balloon__email">
+			<svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
+			<span class="">somemail@mail.com</span>
+		</div>
+		<div class="balloon__work-time">
+			<svg class="icon icon-time"><use xlink:href="#icon-time"></use></svg>
+			<span class="">с 10:00 до 22:00</span>
+		</div>
+	</div>
+</div>
+
+`;
 
 					geoObjects[i] = new ymaps.Placemark(marker, {
 						balloonContent: balloon,
@@ -363,7 +288,7 @@ $(document).ready(() => {
 					size: 'small',
 					float: 'none',
 					position: {
-						top: mapHeight/2 - 30,
+						top: mapHeight / 2 - 30,
 						right: '45px'
 					}
 				});

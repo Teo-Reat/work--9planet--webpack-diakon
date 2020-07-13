@@ -1,6 +1,6 @@
 //Header
 .header {
-  min-height: 59px;
+  height: 59px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
 
   &__wrapper {
@@ -21,6 +21,10 @@
 
   &__work-time {
     display: none;
+
+    & > svg {
+      fill: #b3b3b3;
+    }
   }
 
   &__user {
@@ -45,6 +49,12 @@
       fill: $black;
       transition: .3s;
 
+      & > svg {
+        width: 18px;
+        height: 18px;
+        margin-right: 4vw;
+      }
+
       &:hover {
         fill: $color-regular-green;
         transition: .3s;
@@ -54,15 +64,11 @@
         fill: $color-regular-green;
       }
     }
-
-    & .icon-search {
-      width: 18px;
-      height: 18px;
-      margin-right: 4vw;
-    }
   }
 
   &__language {
+    position: relative;
+
     &__item {
       display: inline-block;
       position: relative;
@@ -80,7 +86,7 @@
 
     &__btn {
       height: 22px;
-      width: 22px;
+      width: 27px;
       display: block;
       position: relative;
       outline: transparent;
@@ -104,95 +110,129 @@
   }
 }
 
+//Language variants
+.language {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  background: $color-light-blue;
+  text-transform: uppercase;
+  font-size: 12px;
+  z-index: 60;
+
+  &__list {
+
+    &__item {
+      & > a {
+        padding: 10px;
+        color: black;
+        display: block;
+        transition: .3s;
+
+        &:hover {
+          background: $color-regular-blue;
+          color: $white;
+          transition: .3s;
+        }
+      }
+
+      &-active {
+        background: $color-regular-blue;
+
+        & > a {
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
 //Navigation Desktops
 .navigation {
   display: none;
   flex-shrink: 0;
+  border-top: 1px solid #cdcdcd;
 }
 
 //Search form
 .search {
   position: absolute;
+  background: #eef5f9;
+  z-index: 10;
+  height: 59px;
+  width: 0;
   top: 0;
   right: 0;
-  z-index: 50;
-  width: 0;
+  transition: .3s;
+  border-bottom: 1px solid #fbfcfd;
   box-sizing: border-box;
   overflow: hidden;
-  transition: .3s;
 
   &__open {
-    transition: .3s;
     width: 100%;
+    transition: .3s;
   }
 
   &__form {
     display: flex;
-    background-color: #eef5f9;
-    border-bottom: 1px solid #fbfcfd;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    height: 100%;
+  }
 
-    &__input {
-      min-height: 60px;
+  &__input {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 0 15px 0 0;
+    font-size: 14px;
+    background: transparent;
+
+    &__wrapper {
       width: 100%;
-      display: block;
-      border: none;
-      padding: 0 10px;
-      flex-shrink: 1;
-      font-size: 14px;
-      background: transparent;
-      outline: transparent;
+      display: inline-block;
+    }
+  }
 
-      &__wrapper {
-        width: 100%;
-      }
+  &__button {
+    height: 59px;
+    width: 59px;
+    display: block;
+    flex-shrink: 0;
+
+    & > svg {
+      margin-top: 0;
     }
 
-    &__button {
-      width: 60px;
-      height: 60px;
-      flex-shrink: 0;
-      fill: $black;
-      position: relative;
-      outline: transparent;
+    &:hover {
+      fill: $color-regular-green;
       transition: .3s;
-
-      &:hover {
-        fill: $color-regular-green;
-        transition: .3s;
-      }
-
-      &:active {
-        fill: $color-regular-green;
-      }
-
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 15px;
-        bottom: 15px;
-        width: 1px;
-        background: #dbddde;
-        right: 0;
-      }
-
-      & svg {
-        width: 18px;
-        height: 18px;
-      }
     }
 
-    &__close {
-      width: 60px;
-      height: 60px;
-      flex-shrink: 0;
-      outline: transparent;
+    &:active {
+      fill: $color-regular-green;
+    }
 
-      & svg {
-        height: 18px;
-        width: 18px;
-        fill: #aaaaaa;
-      }
+    & > svg {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  &__close {
+    height: 59px;
+    width: 59px;
+    display: block;
+    flex-shrink: 0;
+
+    & > svg {
+      height: 18px;
+      width: 18px;
+      fill: #aaaaaa;
     }
   }
 
@@ -202,15 +242,16 @@
     position: absolute;
     top: 59px;
     right: 0;
-    min-width: 100%;
+    width: 100%;
 
     &__wrapper {
       background: #eef5f9;
+      padding: 0;
     }
 
     &__list {
       padding: 0 10px 0;
-      width: 100vw;
+      width: 100%;
     }
 
     &__item {
@@ -263,7 +304,7 @@
   }
 
   &__hot__phone {
-    font-family: $font-openSans-semi;
+    font-family: $font-openSans;
     font-size: 20px;
     font-weight: 700;
     margin: 0 10px;
@@ -276,14 +317,14 @@
   }
 
   &__phone {
-    font-family: $font-openSans-semi;
+    font-family: $font-openSans;
     font-size: 20px;
     font-weight: 700;
     margin: 20px 10px;
   }
 
   &__email {
-    font-family: $font-openSans-semi;
+    font-family: $font-openSans;
     font-size: 14px;
     font-weight: 400;
     margin: 8px 10px 0;
@@ -358,6 +399,7 @@
     display: inline-block;
     font-size: 10px;
     font-weight: 700;
+
     & span {
       opacity: 0.82;
     }
@@ -433,11 +475,10 @@
   text-align: center;
 
   &__title {
-    font-family: $font-openSans-semi;
+    font-family: $font-openSans;
     text-align: left;
     font-size: 24px;
     font-weight: 400;
-    width: 100%;
     margin-top: 45px;
   }
 
@@ -474,7 +515,13 @@
 //Main__News
 .news {
   background: $color-light-blue;
-  padding: 70px 10px 65px;
+  padding: 70px 0 65px;
+
+  &__wrapper {
+    & > div {
+      margin-top: 15px;
+    }
+  }
 
   &__bg {
     position: absolute;
@@ -483,6 +530,7 @@
     right: 0;
     bottom: 0;
     z-index: 0;
+
     & img {
       height: 100%;
       width: 100%;
@@ -492,28 +540,10 @@
   }
 
   &__item {
+    display: block;
+    height: 100%;
     position: relative;
     padding: 0;
-    margin-top: 15px;
-
-    &:nth-child(1),
-    &:nth-child(3),
-    &:nth-child(4) {
-      &::after {
-        @include mix-pseudo-overlay;
-        background-color: #0d2c39;
-        opacity: .5;
-        top: 172px;
-        z-index: 1;
-        transition: .3s;
-      }
-
-      &:hover::after {
-        top: 0;
-        transition: .3s;
-      }
-    }
-
 
     &__description {
       margin-top: 111px;
@@ -556,13 +586,31 @@
 
     &__title {
       margin: 18px 0 0 0;
-      font-family: $font-openSans-semi;
+      font-family: $font-openSans;
       font-size: 16px;
       font-weight: 400;
       line-height: 22px;
       padding: 0 30px 0 30px;
       display: block;
       color: $white;
+    }
+  }
+
+  &__company,
+  &__events,
+  &__webinars {
+    &::after {
+      @include mix-pseudo-overlay;
+      background-color: #0d2c39;
+      opacity: .5;
+      top: 172px;
+      z-index: 1;
+      transition: .3s;
+    }
+
+    &:hover::after {
+      top: 0;
+      transition: .3s;
     }
   }
 
@@ -637,13 +685,10 @@
       color: $black;
     }
 
-    &::before {
-      content: '';
+    &__brand {
       position: absolute;
-      display: block;
       width: 73px;
       height: 47px;
-      background: url("../assets/images/conda.jpg");
       top: 25px;
       right: 18px;
     }
@@ -677,7 +722,7 @@
     }
 
     & .news__item__title {
-      margin-top: -30px;
+      margin-top: -28px;
       background: $color-light-green;
       position: relative;
       z-index: 10;
@@ -711,7 +756,7 @@
   &__subitem__description {
     font-size: 18px;
     line-height: 24px;
-    font-family: $font-openSans-semi;
+    font-family: $font-openSans;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -725,7 +770,7 @@
 
   &__title {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 700;
   }
 
   &__select {
@@ -827,7 +872,7 @@
   }
 
   &__email {
-    font-family: $font-openSans-semi;
+    font-family: $font-openSans;
     font-size: 16px;
     font-weight: 400;
     margin-top: 10px;

@@ -1,20 +1,20 @@
 //Normalize file, reset styles for browsers
 @import "_normalize.scss";
 
-//File with fonts
-@import "fonts";
-
 //Bootstrap-grid file
 @import "grid.scss";
+
+//Plugin for style "select" tag
+@import "nice-select";
+
+//File with fonts
+@import "fonts";
 
 //Variables and mixins
 @import "variables";
 
 //Global styles
 @import "globals";
-
-//Plugin for style "select" tag
-@import "nice-select";
 
 //Mobile version styles
 @import "mobile";
