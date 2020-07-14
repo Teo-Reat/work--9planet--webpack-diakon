@@ -99,6 +99,12 @@ $(document).ready(() => {
 		$('.js-language').slideToggle()
 	})
 
+	//Tablet menu open
+	$('.js-header__tablet-menu__button').click(() => {
+		$('.navigation').toggleClass('navigation__open')
+	})
+
+
 	//Yandex map
 	$(function () {
 		if ($('#map').length) {

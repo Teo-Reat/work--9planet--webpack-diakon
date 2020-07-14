@@ -69,6 +69,7 @@
           padding: 20px 0 22px;
           &::after {
             bottom: -2px;
+            display: block;
           }
         }
       }
@@ -219,6 +220,12 @@
     }
   }
   //Footer
+  //Footer__About
+  .about {
+    & a {
+      font-size: 1em;
+    }
+  }
 
   //Footer__Stuff
   .stuff {
@@ -248,6 +255,10 @@
         height: 24px;
         margin: 17px 0 5px;
         transition: .3s;
+      }
+
+      &__tablet-menu {
+        display: none;
       }
 
       &__hot-line {
@@ -290,6 +301,10 @@
     .navigation {
       height: 65px;
       overflow: visible;
+
+      &__tablet-menu {
+        display: none;
+      }
 
       &__products {
         &__wrapper {

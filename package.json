@@ -25,6 +25,7 @@
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "popper.js": "^1.14.7",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.43.0",
@@ -33,7 +34,16 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "autoprefixer": "^9.8.5",
+    "browserslist": "^4.13.0",
     "clean-webpack-plugin": "^2.0.0",
+    "postcss-cli": "^7.1.1",
     "slick-carousel": "^1.8.1"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ]
 }

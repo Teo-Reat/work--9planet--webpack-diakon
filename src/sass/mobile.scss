@@ -15,6 +15,10 @@
     margin: 17px 40px 17px 0;
   }
 
+  &__tablet-menu {
+    display: none;
+  }
+
   &__hot-line {
     display: none;
   }
@@ -680,6 +684,17 @@
   &__actions {
     background: $white;
     position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: #badb8f;
+      //z-index: -1;
+    }
 
     & .news__item__title {
       color: $black;
@@ -814,6 +829,10 @@
   padding: 40px 0 70px;
   text-align: center;
   position: relative;
+
+  &__submenu {
+    display: none;
+  }
 
   &__bg {
     position: absolute;
