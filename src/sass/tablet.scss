@@ -1,12 +1,12 @@
 @media (min-width: 768px) {
   //Header
   .header {
-
-    height: 149px;
+    height: 70px;
     display: flex;
     flex-wrap: wrap;
     z-index: 5;
     transition: .3s;
+    border-bottom: 1px solid #cdcdcd;
 
     &__top {
       height: 70px;
@@ -15,7 +15,21 @@
     &__logo {
       width: 152px;
       height: 40px;
-      margin: 17px 40px 17px 0;
+      margin: 0;
+    }
+
+    &__tablet-menu {
+      display: block;
+      //margin-left: -30px;
+      position: absolute;
+      left: 50%;
+      margin-left: -180px;
+      margin-top: -7px;
+
+      &__button {
+        //height: 100%;
+        //width: 100%;
+      }
     }
 
     &__hot-line {
@@ -23,6 +37,7 @@
       flex-direction: column;
       align-self: center;
       transition: .3s;
+      margin-left: 80px;
 
       &__phone {
         color: #3c3c3b;
@@ -63,6 +78,7 @@
 
     &__search-language__wrapper {
       flex-direction: column-reverse;
+      margin-bottom: 20px;
     }
 
     &__search {
@@ -94,13 +110,14 @@
       display: none;
     }
   }
+
   //Search form
   .search {
     height: 69px;
-    top: 1px;
+    top: 0;
     left: auto;
     right: 50%;
-    margin-right: -360px;
+    margin-right: -345px;
     background: transparent;
     //border: none;
     //border-bottom: 1;
@@ -141,12 +158,12 @@
 
     //Search__Results
     &__results {
-      top: 70px;
+      top: 69px;
       z-index: 60;
       width: 500px;
       left: auto;
       right: 50%;
-      margin-right: -360px;
+      margin-right: -345px;
       &__wrapper {
         background: transparent;
       }
@@ -167,8 +184,15 @@
   .navigation {
     display: block;
     transition: .3s;
-    width: 100%;
-    height: 79px;
+    height: auto;
+    top: 70px;
+    left: 50%;
+    margin-left: -345px;
+    position: absolute;
+    width: 205px;
+    background: white;
+    border: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 
     &__list {
       display: flex;
@@ -176,84 +200,113 @@
       justify-content: flex-start;
       transition: .3s;
 
+      &__wrapper {
+        display: none;
+        padding: 0;
+      }
+
       &__item {
-        margin-right: 40px;
+        width: 100%;
+        border-right: 1px solid #cdcdcd;
 
-        &:hover > div {
-          visibility: visible;
-          opacity: 1;
+        &__wrapper {
+          display: flex;
+          justify-content: space-between;
+          & > a {
+            padding: 10px 10px 11px;
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            color: $black;
+            transition: .3s;
+            position: relative;
+            width: 100%;
+            text-align: left;
+            overflow: hidden;
+          }
+
+          & > button {
+            position: relative;
+
+            & > svg {
+              padding: 8px 10px;
+              box-sizing: content-box;
+              height: 20px;
+              width: 20px;
+              transition: .3s;
+              fill: #cdcdcd;
+            }
+          }
         }
+      }
+    }
 
-        & > a {
-          padding: 10px 0 11px;
+    &__products {
+      &__wrapper {
+        //visibility: hidden;
+        //opacity: 0;
+        transition: .3s;
+        position: absolute;
+        z-index: 10;
+        padding-bottom: 35px;
+        background: #f1f7fc;
+        top: 0;
+        left: 205px;
+        padding-top: 5px;
+        width: 0;
+        overflow: hidden;
+        height: 300px;
+
+        & ul {
+          justify-content: center;
+        }
+        & .products__item {
+          text-align: center;
+          margin-top: 10px;
+          min-width: 33%;
+
+          & a {
+            color: $black;
+            transition: .3s;
+
+            &:hover {
+              color: $color-regular-blue;
+              transition: .3s;
+            }
+          }
+        }
+      }
+      &_active {
+        &::before {
           display: block;
-          font-size: 14px;
-          font-weight: 400;
-          color: $black;
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 1px;
+          background: $white;
+          right: -1px;
+        }
+        & > svg {
+          transform: rotate(-90deg);
           transition: .3s;
-          position: relative;
-
-          &::after {
-            content: '';
-            display: none;
-            position: absolute;
-            height: 4px;
-            left: -5px;
-            right: -5px;
-            bottom: 0;
-            z-index: 57;
-          }
-
-          &:hover {
-            color: $color-regular-blue;
-            transition: .3s;
-          }
-
-          &:hover::after {
-            background: $color-regular-blue;
-          }
         }
       }
     }
+  }
 
-    &__products__wrapper {
-      visibility: hidden;
-      opacity: 0;
-      transition: all .5s ease;
-      position: absolute;
-      top: 149px;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      padding-top: 35px;
-      padding-bottom: 35px;
-      background: #f1f7fc;
-
-      & ul {
-        justify-content: center;
-      }
-
-      & .products__item {
-        text-align: center;
-        margin-top: 10px;
-
-        & a {
-          color: $black;
-          transition: .3s;
-
-          &:hover {
-            color: $color-regular-blue;
-            transition: .3s;
-          }
-        }
-      }
-    }
+  //Navigation submenu
+  .js-hover {
+    //visibility: visible;
+    //opacity: 1;
+    width: 485px;
+    height: 500px;
   }
 
   //Main
   .is-fixed {
     margin-top: 70px;
   }
+
   //Main__Prime
   .prime {
     &__slider__item {
@@ -303,6 +356,7 @@
       left: 40px;
     }
   }
+
   //Main__Products
   .products {
     &__title {
@@ -313,6 +367,7 @@
       justify-content: center;
     }
   }
+
   //Main__News
   .news {
     &__wrapper {
@@ -335,6 +390,7 @@
       margin-top: 0;
     }
   }
+
   //Footer
   //About
   .about {
@@ -428,119 +484,88 @@
 
   //Fixed header style
   .fixed {
-    height: 70px;
-    & .mobile {
+    //height: 70px;
 
-    }
     //Header
     .header {
-      transition: .3s;
+      //transition: .3s;
 
-      &__wrapper {
-        align-items: unset;
-      }
-
-      &__logo {
-        margin-right: 0;
-        order: -2;
-      }
-
-      &__tablet-menu {
-        display: block;
-        margin-left: -95px;
-
-        &__button {
-          height: 100%;
-          width: 100%;
+      &__top {
+        & > div {
+          //height: 100%;
         }
       }
 
-      &__hot-line {
-        transition: .3s;
-      }
+      //&__user {
+      //  margin-right: -225px;
+      //  transition: .3s;
+      //
+      //  & span {
+      //    visibility: hidden;
+      //    opacity: 0;
+      //    margin-top: -10px;
+      //    transition: .3s;
+      //  }
+      //}
 
-      &__user {
-        margin-right: -200px;
-        transition: .3s;
-
-        & span {
-          visibility: hidden;
-          opacity: 0;
-          margin-top: -10px;
-          transition: .3s;
-        }
-      }
-
-      &__search-language__wrapper {
-        margin-top: 10px;
-        margin-left: 10px;
-      }
-
-      &__search {
-        margin-bottom: 15px;
-      }
+      //&__search-language__wrapper {
+      //  //margin-top: 10px;
+      //  margin-left: 10px;
+      //}
     }
 
     //Fixed Navigation
     & .navigation {
-      transition: .3s;
-      height: 0;
-      border: none;
-      top: 70px;
-      left: 85px;
-      position: absolute;
-      opacity: 0;
-      visibility: hidden;
-      display: inline-block;
-      width: 175px;
-
-      &__open {
-        //overflow: visible;
-        visibility: visible;
-        opacity: 1;
-        left: 0;
-        & .navigation__list {
-          flex-direction: column;
-          background: $white;
-          padding: 0;
-          margin-top: 0;
-          margin-left: 173px;
-          min-width: 175px;
-          &__item {
-            border-top: 1px solid $color-light-blue;
-            padding: 0 20px;
-            margin: 0;
-            & > a {
-              white-space: nowrap;
-              &::after {
-                display: none;
-              }
-            }
-          }
-        }
-      }
+      //transition: .3s;
+      //height: auto;
+      //top: 70px;
+      //left: 50%;
+      //margin-left: -360px;
+      //position: absolute;
+      //width: 175px;
+      //background: white;
 
       &__products {
+        &-active {
+          & > svg {
+            //transform: rotate(-90deg);
+            //transition: .3s;
+          }
+        }
         &__wrapper {
-          top: 70px;
+          //top: 70px;
         }
       }
 
       &__list {
-        margin-top: -70px;
-        padding: 0 70px 0 100px;
-        transition: .3s;
+        //padding: 0;
+        //transition: .3s;
+
+        &__wrapper {
+          //display: none;
+        }
 
         &__item {
-          margin: 0 10px;
+          //margin: 0 10px;
+          //width: 100%;
+          //display: flex;
+          //justify-content: space-between;
 
           &:hover > div {
-            visibility: visible;
-            opacity: 1;
+            //position: fixed;
+            //top: 70px;
+            //right: 0;
+            //left: 50%;
+            //margin-left: -185px;
+            //max-width: 545px;
           }
 
-          & > a {
-            padding: 4px 0 6px;
+          & > svg {
+            //display: block;
+            //height: 20px;
+            //width: 20px;
+            //right: 0;
+            //top: 10px;
           }
         }
       }

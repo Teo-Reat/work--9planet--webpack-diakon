@@ -89,8 +89,8 @@
   //Main__News
   .news {
     &__actions {
-      & .news__item__title {
-        //padding-bottom: 96px;
+      &::after {
+        height: 60px;
       }
     }
   }
@@ -100,9 +100,30 @@
     //min-height: 65px;
 
     & .header {
+      &__tablet-menu {
+        display: none;
+      }
+      &__hot-line {
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+        margin-top: -30px;
+      }
+      &__work-time {
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+        margin-top: -30px;
+      }
       &__user {
         margin-right: -330px;
         //margin-bottom: -10px;
+        & span {
+          visibility: hidden;
+          opacity: 0;
+          transition: .3s;
+          margin-top: -30px;
+        }
       }
 
       &__search-language__wrapper {
@@ -110,18 +131,80 @@
       }
     }
 
+    //Fixed Navigation
     & .navigation {
+      left: 0;
+      right: 0;
+      position: absolute;
+      opacity: 1;
+      visibility: visible;
+      margin: 0;
+      width: 100%;
+
+      &__products {
+        &__wrapper {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: unset;
+        }
+      }
+
+      & .products__item {
+        min-width: unset;
+      }
+
       &__list {
-        margin-top: -87px;
+        flex-wrap: wrap;
+        padding: 0 110px 0 115px;
+        margin-top: -53px;
+        justify-content: space-between;
+
+        &__wrapper {
+          display: block;
+          height: 0;
+        }
 
         &__item {
-          //margin: 0 5px;
-          & > a {
-            font-size: 15px;
-            &::after {
-              //bottom: -20px;
+          margin: 0;
+
+          &__wrapper {
+            & > a {
+              padding: 12px 10px 24px;
+              overflow: visible;
+              &:hover::after {
+                display: block;
+              }
+            }
+
+            & > button {
+              display: none;
             }
           }
+
+          //&:hover > div {
+          //  position: fixed;
+          //  top: 65px;
+          //  right: 0;
+          //  left: 0;
+          //  margin-left: 0;
+          //  max-width: 100%;
+          //}
+
+          & > a,
+          & > button {
+            font-size: 10px;
+            padding: 10px 0 26px;
+          }
+        }
+      }
+
+      & .navigation__list {
+        padding: 0;
+        margin: -53px 110px 0 115px;
+        &__item {
+          width: auto;
+          border: none;
         }
       }
     }
