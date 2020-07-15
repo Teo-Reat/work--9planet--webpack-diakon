@@ -394,7 +394,7 @@
   //Footer
   //About
   .about {
-    padding: 35px 0 70px;
+    padding: 35px 0 45px;
     text-align: left;
 
     & a {
@@ -407,7 +407,7 @@
       flex-direction: column;
       max-height:calc((19px + 20px) * 8);
       &__item {
-        margin-top: 20px;
+        //margin-top: 15px;
 
         & a {
           transition: .3s;
@@ -427,12 +427,12 @@
       -moz-columns: 2;
 
       &__wrapper {
-        margin-top: 20px;
+        margin-top: 15px;
         display: block;
       }
 
       &__item {
-        padding-top: 20px;
+        padding-top: 15px;
 
         & a {
           color: $white;

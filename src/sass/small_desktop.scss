@@ -323,16 +323,17 @@
       }
 
       &__logo {
-        width: 91px;
-        height: 24px;
+        //width: 91px;
+        //height: 24px;
         //margin: 17px 0 5px;
-        transition: .3s;
+        //transition: .3s;
       }
 
       &__tablet-menu {
         display: block;
         position: static;
-        margin: 0;
+        margin-top: -13px;
+        margin-left: -45px;
       }
 
       &__hot-line {
@@ -418,14 +419,14 @@
             //justify-content: space-between;
             & > a {
               padding: 10px 10px 11px;
-              display: block;
-              font-size: 14px;
-              font-weight: 400;
-              color: $black;
-              transition: .3s;
+              //display: block;
+              //font-size: 14px;
+              //font-weight: 400;
+              //color: $black;
+              //transition: .3s;
               position: relative;
               width: 100%;
-              text-align: left;
+              //text-align: left;
               overflow: hidden;
               &::after {
                 display: none;

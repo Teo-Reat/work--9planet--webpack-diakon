@@ -100,6 +100,13 @@
     //min-height: 65px;
 
     & .header {
+      &__logo {
+        width: 91px;
+        height: 24px;
+        //margin: 17px 0 5px;
+        transition: .3s;
+      }
+
       &__tablet-menu {
         display: none;
       }
