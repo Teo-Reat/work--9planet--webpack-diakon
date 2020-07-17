@@ -1,7 +1,20 @@
 @media (min-width: 1410px) {
   //Header
   .header {
-    //min-height: 160px;
+    &__hot-line {
+      margin-left: 320px;
+    }
+    &__work-time {
+      margin-left: 75px;
+    }
+    &__user {
+      margin-left: 45px;
+      margin-right: auto;
+    }
+    &__search {
+      margin-top: 10px;
+      margin-bottom: -5px;
+    }
   }
 
   //Search form
@@ -29,20 +42,20 @@
       flex-wrap: nowrap;
       justify-content: space-between;
       &__item {
-        & > a {
-          &::after {
-            //bottom: -14px;
+        &__wrapper {
+          & > a {
+            font-size: 16px;
           }
         }
       }
     }
 
     &__products__wrapper {
-      //top: 160px;
+      padding: 15px 0 40px;
 
       & .products__item {
         text-align: left;
-        margin-top: 20px;
+        margin-top: 30px;
         min-width: unset;
 
         & a {
@@ -69,7 +82,7 @@
   .prime {
 
     &__slider__item {
-      min-height: 600px;
+      height: 600px;
     }
     &__new {
       margin-left: 0;
@@ -78,20 +91,60 @@
 
     &__title {
       margin-left: 0;
+      line-height: 49.86px;
+      width: 685px;
     }
 
     &__description {
       margin-left: 60px;
+      line-height: 32px;
+      width: 500px;
+      margin-top: 42px;
+      & > li {
+        margin-left: -27px;
+      }
     }
 
   }
 
+  //Main__Prodicts
+  .products {
+    padding: 80px 0 80px;
+    &__item {
+      margin-top: 45px;
+      margin-bottom: 13px;
+      &__image {
+        & > svg {
+          width: 146px;
+          height: 146px;
+        }
+      }
+    }
+  }
+
   //Main__News
   .news {
+    padding: 62px 0 113px;
     &__actions {
       &::after {
         height: 60px;
       }
+    }
+  }
+
+  //Main__Network
+  .network {
+    padding: 52px 0 0;
+    &__map {
+      margin-top: 47px;
+    }
+  }
+
+  //Footer
+  //Footer__Stuff
+  .footer {
+    &__stuff {
+      font-size: 14px;
     }
   }
 
@@ -123,7 +176,7 @@
         margin-top: -30px;
       }
       &__user {
-        margin-right: -330px;
+        margin-right: -295px;
         //margin-bottom: -10px;
         & span {
           visibility: hidden;
@@ -150,6 +203,7 @@
 
       &__products {
         &__wrapper {
+          padding-top: 15px;
           top: 0;
           left: 0;
           width: 100%;
@@ -159,11 +213,21 @@
 
       & .products__item {
         min-width: unset;
+        &__description {
+          font-size: 16px;
+        }
+
+        &__image {
+          & > svg {
+            width: 86px;
+            height: 86px;
+          }
+        }
       }
 
       &__list {
         flex-wrap: wrap;
-        padding: 0 110px 0 115px;
+        //padding: 0 110px 0 125px;
         margin-top: -53px;
         justify-content: space-between;
 
@@ -177,7 +241,8 @@
 
           &__wrapper {
             & > a {
-              padding: 12px 10px 24px;
+              padding: 12px 0 24px;
+              font-size: 15px;
               overflow: visible;
               &:hover::after {
                 display: block;
@@ -208,7 +273,7 @@
 
       & .navigation__list {
         padding: 0;
-        margin: -53px 110px 0 115px;
+        margin: -53px 125px 0 135px;
         &__item {
           width: auto;
           border: none;

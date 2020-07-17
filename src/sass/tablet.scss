@@ -7,6 +7,7 @@
     z-index: 5;
     transition: .3s;
     border-bottom: 1px solid #cdcdcd;
+    background: $white;
 
     &__top {
       height: 70px;
@@ -24,7 +25,7 @@
       position: absolute;
       left: 50%;
       margin-left: -180px;
-      margin-top: -7px;
+      //margin-top: -7px;
 
       &__button {
         //height: 100%;
@@ -79,6 +80,7 @@
     &__search-language__wrapper {
       flex-direction: column-reverse;
       margin-bottom: 20px;
+      margin-right: unset;
     }
 
     &__search {
@@ -277,15 +279,15 @@
         }
       }
       &_active {
-        &::before {
-          display: block;
-          content: '';
-          position: absolute;
-          height: 100%;
-          width: 1px;
-          background: $white;
-          right: -1px;
-        }
+        //&::before {
+        //  display: block;
+        //  content: '';
+        //  position: absolute;
+        //  height: 100%;
+        //  width: 1px;
+        //  background: $white;
+        //  right: -1px;
+        //}
         & > svg {
           transform: rotate(-90deg);
           transition: .3s;
@@ -309,14 +311,23 @@
 
   //Main__Prime
   .prime {
-    &__slider__item {
-      font-size: 12px;
-      font-weight: 700;
+    &__description {
+      margin-bottom: 75px;
+    }
+
+    &__slider {
+      &__item {
+        font-size: 12px;
+        font-weight: 700;
+        height: unset;
+        min-height: 430px;
+      }
     }
 
     &__slider {
       &__image {
-        display: block;
+        display: flex;
+        align-items: center;
         margin-top: 40px;
 
         & img {
@@ -359,8 +370,13 @@
 
   //Main__Products
   .products {
-    &__title {
-      //text-align: center;
+    &__item {
+      &__image {
+        & > svg {
+          width: 86px;
+          height: 86px;
+        }
+      }
     }
 
     &__wrapper {
@@ -370,9 +386,41 @@
 
   //Main__News
   .news {
+    padding-top: 35px;
     &__wrapper {
       & > div {
         margin-top: 30px;
+      }
+    }
+
+    &__actions {
+      &__slick-next,
+      &__slick-prev {
+        position: absolute;
+        top: 142px;
+        z-index: 10;
+        width: 42px;
+        height: 42px;
+        fill: #eef2f5;
+        transition: .3s;
+
+        & svg {
+          width: 42px;
+          height: 42px;
+        }
+
+        &:hover {
+          fill: #b7c8d5;
+          transition: .3s;
+        }
+      }
+
+      &__slick-next {
+        right: 20px;
+      }
+
+      &__slick-prev {
+        left: 20px;
       }
     }
   }
@@ -387,7 +435,7 @@
     }
 
     &__select {
-      margin-top: 0;
+      margin-top: 5px;
     }
   }
 
@@ -398,7 +446,7 @@
     text-align: left;
 
     & a {
-      font-size: 0.8em;
+      //font-size: 0.8em;
     }
 
     &__menu {
@@ -465,6 +513,7 @@
       width: 218px;
       height: 57px;
       opacity: .36;
+      margin-left: 15px;
     }
   }
 
@@ -487,7 +536,7 @@
     //height: 70px;
 
     //Header
-    .header {
+    & .header {
       //transition: .3s;
 
       &__top {

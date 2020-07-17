@@ -3,6 +3,10 @@
   height: 59px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
 
+  &__top {
+    height: inherit;
+  }
+
   &__wrapper {
     justify-content: space-between;
     display: flex;
@@ -12,7 +16,7 @@
   &__logo {
     height: 24px;
     width: 90px;
-    margin: 17px 40px 17px 0;
+    //margin: 17px 38px 17px 0;
   }
 
   &__tablet-menu {
@@ -32,19 +36,25 @@
   }
 
   &__user {
+    margin-left: 38px;
     & span {
       display: none;
     }
-  }
-
-  & .icon-lk {
-    height: 18px;
-    width: 18px;
-    fill: $black;
+    & .icon-lk {
+      height: 18px;
+      width: 18px;
+      fill: $black;
+    }
   }
 
   &__search-language__wrapper {
     display: flex;
+    margin-left: 22px;
+    margin-right: auto;
+  }
+
+  &__language {
+    margin-left: 20px;
   }
 
   &__search {
@@ -52,11 +62,11 @@
       outline: transparent;
       fill: $black;
       transition: .3s;
+      display: block;
 
       & > svg {
         width: 18px;
         height: 18px;
-        margin-right: 4vw;
       }
 
       &:hover {
@@ -74,6 +84,7 @@
     position: relative;
 
     &__item {
+      font-size: 12px;
       display: inline-block;
       position: relative;
       text-transform: uppercase;
@@ -82,6 +93,8 @@
     .icon-arrow_down {
       width: 20px;
       height: 15px;
+      margin-bottom: -3px;
+      margin-left: -2px;
     }
   }
 
@@ -254,7 +267,7 @@
     }
 
     &__list {
-      padding: 0 10px 0;
+      padding: 7px 30px 1px;
       width: 100%;
     }
 
@@ -306,40 +319,52 @@
   width: 100%;
   top: 58px;
 
-  &__contacts {
-    border-bottom: 1px solid #dee6ec;
+  &__contacts,
+  &__menu__item {
     padding-bottom: 30px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 100vw;
+      left: 50%;
+      bottom: 0;
+      margin-left: -50vw;
+      background: #dee6ec;
+    }
   }
 
   &__hot__phone {
     font-family: $font-openSans;
     font-size: 20px;
     font-weight: 700;
-    margin: 0 10px;
   }
 
   &__hot__description {
     font-size: 13px;
     font-weight: 400;
-    margin: 8px 10px;
+    margin: 8px 0;
   }
 
   &__phone {
     font-family: $font-openSans;
     font-size: 20px;
     font-weight: 700;
-    margin: 20px 10px;
+    margin: 20px 0;
   }
 
   &__email {
     font-family: $font-openSans;
     font-size: 14px;
     font-weight: 400;
-    margin: 8px 10px 0;
+    margin: 8px 0 0;
   }
 
   &__menu__item {
-    border-bottom: 1px solid #dee6ec;
+    //border-bottom: 1px solid #dee6ec;
+    padding-bottom: 0;
 
     & > div {
       display: flex;
@@ -355,8 +380,6 @@
       font-weight: 700;
       color: $black;
       padding: 15px 0;
-      margin: 0 10px;
-      justify-content: space-between;
     }
 
     & svg {
@@ -374,9 +397,18 @@
   }
 
   &__submenu {
-    background: $white;
-    padding: 20px 0 20px 25px;
+    padding: 20px 0 20px 15px;
     display: none;
+    position: relative;
+    left: 50%;
+    margin-left: -150px;
+    &__wrapper {
+      position: relative;
+      width: 100vw;
+      left: 50%;
+      margin-left: -50vw;
+      background: $white;
+    }
 
     &__item {
       display: flex;
@@ -419,6 +451,10 @@
     font-size: 10px;
     font-weight: 700;
 
+    &_disabled {
+      opacity: 0;
+    }
+
     & span {
       opacity: 0.82;
     }
@@ -436,6 +472,23 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    & > li {
+      padding-left: 27px;
+      position: relative;
+      //margin-left: -15px;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 17px;
+        height: 2px;
+        background: #95b927;
+        z-index: 10;
+        top: 15px;
+        //left: -27px;
+        left: 0;
+      }
+    }
   }
 
   &__bg {
@@ -492,17 +545,33 @@
 //Main__Products
 .products {
   text-align: center;
+  padding: 59px 0 64px;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
 
   &__title {
     font-family: $font-openSans;
     text-align: left;
     font-size: 24px;
-    font-weight: 400;
-    margin-top: 45px;
+    font-weight: 700;
   }
 
   &__wrapper {
-    margin-bottom: 63px;
+    //margin-bottom: 63px;
   }
 
   &__item {
@@ -533,8 +602,9 @@
 
 //Main__News
 .news {
-  background: $color-light-blue;
-  padding: 70px 0 65px;
+  background: #f1f7fc;
+  border: 1px solid rgba(76, 151, 190, 0.21);
+  padding: 55px 0 65px;
 
   &__wrapper {
     & > div {
@@ -563,6 +633,7 @@
     height: 100%;
     position: relative;
     padding: 0;
+    box-shadow: 0 3px 7px rgba(62, 125, 177, 0.08);
 
     &__description {
       margin-top: 111px;
@@ -607,7 +678,7 @@
       margin: 18px 0 0 0;
       font-family: $font-openSans;
       font-size: 16px;
-      font-weight: 400;
+      font-weight: 600;
       line-height: 22px;
       padding: 0 30px 0 30px;
       display: block;
@@ -637,7 +708,7 @@
     color: $white;
 
     & .news__item__billet {
-      background: $color-light-blue;
+      background-color: #dee7fd;
     }
 
     & .icon-time {
@@ -649,7 +720,7 @@
     background: $white;
 
     & > .news__item__billet {
-      background: $color-light-green;
+      background-color: #deedc6;
     }
 
     & > .news__item__title {
@@ -672,7 +743,7 @@
     color: $white;
 
     & .news__item__billet {
-      background: $color-light-blue;
+      background-color: #caecfb;
     }
 
     & .news__item__date {
@@ -686,7 +757,7 @@
     color: $white;
 
     & .news__item__billet {
-      background: $color-light-green;
+      background-color: #deedc6;
     }
 
     & .news__item__date {
@@ -707,7 +778,7 @@
       left: 0;
       right: 0;
       height: 40px;
-      background: #badb8f;
+      background-color: #deedc6;
       //z-index: -1;
     }
 
@@ -741,7 +812,7 @@
     }
 
     & .news__item__billet {
-      background: $color-light-blue;
+      background-color: #caecfb;
     }
 
     & .news__item__image {
@@ -753,7 +824,7 @@
 
     & .news__item__title {
       margin-top: -28px;
-      background: $color-light-green;
+      background-color: #deedc6;
       position: relative;
       z-index: 10;
       padding: 29px 30px 37px;
@@ -772,14 +843,36 @@
   &__item__subitem {
     display: flex;
     justify-content: space-between;
-    padding: 34px 37px 36px 30px;
-    box-shadow: 0 3px 7px rgba(62, 125, 177, 0.08);
-    border-bottom: 1px solid rgba(115, 164, 184, .32);
+    padding: 34px 39px 36px 31px;
     transition: .3s;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: #eef8fd;
+      height: 1px;
+      left: 31px;
+      right: 39px;
+      bottom: 0;
+
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
 
     &:hover {
       background: #eef8fd;
       transition: .3s;
+      box-shadow: 0 3px 7px rgba(62, 125, 177, 0.08);
+
+      & .news__subitem__description {
+        opacity: 0.7;
+      }
     }
   }
 
@@ -796,7 +889,7 @@
 
 //Main__Network
 .network {
-  padding: 55px 0 47px;
+  padding: 52px 0 0;
 
   &__title {
     font-size: 24px;
@@ -804,9 +897,16 @@
   }
 
   &__select {
-    margin-top: 10px;
+    margin-top: 26px;
     border-radius: 0;
     background: #f1f7fc;
+    height: 37px;
+    line-height: 35px;
+
+    &__wrapper {
+      max-width: 368px;
+      margin-left: auto;
+    }
 
     & .list {
       border-radius: 0;
@@ -828,9 +928,9 @@
   }
 
   &__map {
-    //width: 900px;
     min-height: 500px;
-    margin: 35px auto;
+    margin: 35px auto 0;
+    border: 1px solid #b4bac2;
   }
 }
 
@@ -890,10 +990,7 @@
   &__hot__phone {
     font-size: 24px;
     font-weight: 700;
-  }
-
-  &__phone {
-    margin-top: 35px;
+    color: $white;
   }
 
   &__hot__phone {
@@ -903,6 +1000,11 @@
   &__hot__description {
     font-size: 14px;
     font-weight: 400;
+    margin-top: 16px;
+  }
+
+  &__phone {
+    margin-top: 38px;
   }
 
   &__email {
@@ -921,7 +1023,7 @@
 .stuff {
   background: $color-heavy-blue;
   color: $white;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   padding: 25px 0 20px;
 

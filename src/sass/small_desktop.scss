@@ -108,22 +108,33 @@
 
         &__wrapper {
           & > a {
-            padding: 20px 0 22px;
+            padding: 19px 0 22px;
             overflow: visible;
+
+            &::after {
+              content: '';
+              display: block;
+              //bottom: 0;
+              bottom: -1px;
+              position: absolute;
+              height: 4px;
+              left: -10px;
+              right: -10px;
+              z-index: 57;
+              visibility: hidden;
+              opacity: 0;
+              transition: .3s;
+              background: $color-regular-blue;
+            }
+
             &:hover {
               color: $color-regular-blue;
             }
 
             &:hover::after {
-              content: '';
-              display: block;
-              bottom: -2px;
-              position: absolute;
-              height: 4px;
-              left: -5px;
-              right: -5px;
-              z-index: 57;
-              background: $color-regular-blue;
+              transition: .3s;
+              visibility: visible;
+              opacity: 1;
             }
           }
 
@@ -148,6 +159,17 @@
 
       & .products__item {
         min-width: unset;
+
+        &__image {
+          & > svg {
+            width: 86px;
+            height: 86px;
+          }
+        }
+
+        &__description {
+          font-size: 16px;
+        }
       }
 
       & ul {
@@ -242,38 +264,6 @@
         }
       }
     }
-
-    &__actions {
-
-      &__slick-next,
-      &__slick-prev {
-        position: absolute;
-        top: 120px;
-        z-index: 10;
-        width: 42px;
-        height: 42px;
-        fill: #eef2f5;
-        transition: .3s;
-
-        & svg {
-          width: 42px;
-          height: 42px;
-        }
-
-        &:hover {
-          fill: #b7c8d5;
-          transition: .3s;
-        }
-      }
-
-      &__slick-next {
-        right: 20px;
-      }
-
-      &__slick-prev {
-        left: 20px;
-      }
-    }
   }
   //Main__Network
   .network {
@@ -291,12 +281,13 @@
   //Footer__About
   .about {
     & a {
-      font-size: 1em;
+      //font-size: 1em;
     }
   }
 
   //Footer__Stuff
   .stuff {
+    font-size: 14px;
     &__wrapper {
       justify-content: start;
     }
@@ -332,8 +323,8 @@
       &__tablet-menu {
         display: block;
         position: static;
-        margin-top: -13px;
-        margin-left: -45px;
+        //margin-top: -13px;
+        margin-left: -25px;
       }
 
       &__hot-line {
@@ -374,12 +365,18 @@
       }
 
       &__search {
-        //margin-bottom: 20px;
+
       }
 
       &__menu {
         //display: none;
       }
+    }
+
+    //Fixed search block
+    & .search {
+      top: 0;
+      height: 65px;
     }
 
     //Fixed navigation
@@ -462,7 +459,7 @@
           height: 300px;
 
           & ul {
-            justify-content: center;
+            justify-content: flex-start;
           }
           & .products__item {
             text-align: center;
@@ -478,22 +475,32 @@
                 transition: .3s;
               }
             }
+            &__description {
+              font-size: 14px;
+            }
+            &__image {
+              & > svg {
+                width: 54px;
+                height: 54px;
+              }
+            }
+
           }
         }
         &_active {
-          &::before {
-            display: block;
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 1px;
-            background: $white;
-            right: -1px;
-          }
-          & > svg {
-            transform: rotate(-90deg);
-            transition: .3s;
-          }
+          //&::before {
+          //  display: block;
+          //  content: '';
+          //  position: absolute;
+          //  height: 100%;
+          //  width: 1px;
+          //  background: red;
+          //  right: -1px;
+          //}
+          //& > svg {
+          //  transform: rotate(-90deg);
+          //  transition: .3s;
+          //}
         }
       }
     }
@@ -503,7 +510,7 @@
       //visibility: visible;
       //opacity: 1;
       width: 725px;
-      height: 420px;
+      //height: 420px;
     }
 
 
@@ -557,5 +564,8 @@
     //    }
     //  }
     //}
+  }
+  .fixed__results {
+    top: 65px;
   }
 }

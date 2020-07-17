@@ -24,6 +24,7 @@ $(document).ready(() => {
 
 	//Slick slider in prime section
 	$('.js-prime__slider').slick({
+		autoplay: true,
 		dots: true,
 		arrows: true,
 		infinite: true,
@@ -46,7 +47,7 @@ $(document).ready(() => {
 
 	//Slick slider in news section
 	$('.news__actions__slider').slick({
-		// autoplay: true,
+		autoplay: true,
 		dots: false,
 		arrows: true,
 		infinite: true,
@@ -57,7 +58,7 @@ $(document).ready(() => {
 		nextArrow: '<button type="button" class="slick-next news__actions__slick-next"><svg class="icon icon-arrow-r"><use xlink:href="#icon-arrow-r"></use></svg></button>',
 		responsive: [
 			{
-				breakpoint: 1024,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -274,7 +275,7 @@ $(document).ready(() => {
 		</div>
 		<div class="balloon__email">
 			<svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
-			<span class="">somemail@mail.com</span>
+			<a href="mailto:somemail@mail.ru">somemail@mail.ru</a>
 		</div>
 		<div class="balloon__work-time">
 			<svg class="icon icon-time"><use xlink:href="#icon-time"></use></svg>

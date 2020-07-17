@@ -1,6 +1,6 @@
-.no-border {
-  border: none;
-}
+//.no-border {
+//  border: none;
+//}
 
 .header__menu__btn_close {
   & svg {
@@ -78,6 +78,7 @@
     left: 0;
     height: 24px;
     width: 24px;
+    fill: #747373;
   }
 
   &__title {
@@ -112,6 +113,9 @@
     margin-top: 10px;
     position: relative;
     padding-left: 30px;
+    & > a {
+      color: $black;
+    }
   }
   &__work-time {
     margin-top: 10px;
