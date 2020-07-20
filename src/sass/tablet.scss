@@ -90,6 +90,7 @@
 
     &__language {
       margin-bottom: 10px;
+      margin-left: 0;
       display: flex;
 
       & span {
@@ -260,7 +261,7 @@
         height: 300px;
 
         & ul {
-          justify-content: center;
+          //justify-content: center;
         }
         & .products__item {
           text-align: center;
@@ -276,7 +277,19 @@
               transition: .3s;
             }
           }
+          &__description {
+            font-size: 14px;
+          }
+          &__image {
+            & > svg {
+              width: 54px;
+              height: 54px;
+            }
+          }
         }
+
+
+
       }
       &_active {
         //&::before {
@@ -301,7 +314,7 @@
     //visibility: visible;
     //opacity: 1;
     width: 485px;
-    height: 500px;
+    height: auto;
   }
 
   //Main
@@ -445,8 +458,10 @@
     padding: 35px 0 45px;
     text-align: left;
 
-    & a {
-      //font-size: 0.8em;
+    &__menu {
+      & a {
+        font-size: 13px;
+      }
     }
 
     &__menu {

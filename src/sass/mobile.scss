@@ -5,6 +5,9 @@
 
   &__top {
     height: inherit;
+    & > div {
+      height: inherit;
+    }
   }
 
   &__wrapper {
@@ -14,6 +17,7 @@
   }
 
   &__logo {
+    display: block;
     height: 24px;
     width: 90px;
     //margin: 17px 38px 17px 0;

@@ -8,6 +8,9 @@
     &__work-time {
       margin-left: 89px;
     }
+    &__search {
+      margin-left: 0;
+    }
   }
 
   //Search form
@@ -88,6 +91,10 @@
     & .header {
       &__user {
         margin-right: -350px;
+      }
+
+      &__search {
+        margin-left: auto;
       }
     }
     & .navigation {
