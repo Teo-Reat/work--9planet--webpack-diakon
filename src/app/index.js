@@ -125,10 +125,6 @@ $(document).ready(() => {
 		$('.js-mobile__products').toggleClass('mobile__menu__item_active')
 	})
 
-	// $('.header').hasClass('fixed') => {
-	// 	$('.container').css('background', 'red')
-	// }
-
 
 	//Yandex map
 	$(function () {

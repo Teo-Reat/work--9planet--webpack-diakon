@@ -12,7 +12,10 @@ module.exports = merge(common, {
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "./src/template.html"
-		})
+		}),
+		new HtmlWebpackPlugin({
+			template: "./src/pages/webinar.html"
+		}),
 	],
 	module: {
 		rules: [
