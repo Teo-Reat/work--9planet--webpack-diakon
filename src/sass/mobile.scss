@@ -209,7 +209,7 @@
     width: 100%;
     display: block;
     border: none;
-    padding: 0 15px 0 0;
+    padding: 0 15px 0 10px;
     font-size: 14px;
     background: transparent;
 
@@ -356,14 +356,14 @@
     font-family: $font-openSans;
     font-size: 20px;
     font-weight: 700;
-    margin: 20px 0;
+    margin: 20px 0 0;
   }
 
   &__email {
     font-family: $font-openSans;
     font-size: 14px;
     font-weight: 400;
-    margin: 8px 0 0;
+    margin: 7px 0 0;
   }
 
   &__menu__item {

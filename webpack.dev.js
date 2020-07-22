@@ -1,7 +1,7 @@
 const path = require("path");
 const common = require("./webpack.common");
 const merge = require("webpack-merge");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(common, {
 	mode: "development",
@@ -13,9 +13,9 @@ module.exports = merge(common, {
 		new HtmlWebpackPlugin({
 			template: "./src/template.html"
 		}),
-		new HtmlWebpackPlugin({
-			template: "./src/pages/webinar.html"
-		}),
+		// new HtmlWebpackPlugin({
+		// 	template: "./src/pages/webinar.html"
+		// }),
 	],
 	module: {
 		rules: [

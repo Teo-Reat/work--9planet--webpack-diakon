@@ -124,6 +124,45 @@
   }
 }
 
+@media (max-width: 575px) {
+  .popover {
+    width: 100%;
+  }
+
+  .balloon {
+
+    &__title {
+      padding-bottom: 10px;
+      & a {
+        font-size: 18px;
+      }
+    }
+    &__address {
+      font-size: 12px;
+      padding: 10px 0 10px 30px;
+      & svg {
+        top: 8px;
+      }
+    }
+    &__phone {
+      margin-top: 10px;
+      padding-left: 30px;
+    }
+    &__email {
+      margin-top: 5px;
+      padding-left: 30px;
+      & > a {
+        //color: $black;
+      }
+    }
+    &__work-time {
+      margin-top: 5px;
+      //position: relative;
+      padding-left: 30px;
+    }
+  }
+}
+
 .show {
   display: block;
 }

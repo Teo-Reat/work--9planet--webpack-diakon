@@ -1,4 +1,9 @@
 @media (min-width: 768px) {
+  //Global
+  body {
+    height: 100%;
+  }
+
   //Header
   .header {
     height: 70px;
@@ -44,6 +49,9 @@
         color: #3c3c3b;
         font-size: 18px;
         font-weight: 700;
+        & > a {
+          color: $black;
+        }
       }
 
       &__description {
