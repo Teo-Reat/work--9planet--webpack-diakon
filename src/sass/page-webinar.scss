@@ -30,25 +30,51 @@
 .webinars {
   position: relative;
   height: 100px;
-  &__title {
-    padding-top: 50px;
-  }
+  padding-top: 50px;
 }
 
 //Next section
 .next {
-  &__subtitle {
-    margin-top: 42px;
-  }
+  padding: 40px 0 45px;
   &__signboard {
     margin-top: 30px;
+  }
+  &__description {
+    color: $black;
+    margin-top: 34px;
+    display: block;
+    &:hover {
+      color: rgba(0, 0, 0, .7);
+    }
+  }
+  &__title {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 600;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 16px;
   }
 }
 
 .signboard {
   position: relative;
+  &:hover &__sign-up {
+    height: 68px;
+    transition: .3s;
+  }
+  &:hover &__bg::before {
+    transition: .3s;
+    height: 100%;
+  }
   &__wrapper {
     min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__bg {
     &::before {
@@ -56,10 +82,11 @@
       position: absolute;
       display: block;
       opacity: .5;
-      top: 150px;
+      top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
+      height: 0;
+      transition: .3s;
       content: '';
     }
   }
@@ -70,10 +97,14 @@
     border-radius: 2px;
     border: 1px solid rgba(249, 252, 253, 0.24);
     background-color: #deedc6;
-    margin: 31px 0 0 34px;
+    margin: 15px 0 0 17px;
     align-items: center;
+    display: flex;
+    padding: 5px 16px 6px 9px;
+    font-size: 14px;
     & > span {
       display: inline-block;
+      margin-left: 3px;
     }
     & > svg {
       height: 24px;
@@ -83,24 +114,148 @@
     }
   }
   &__time {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
     border-radius: 2px;
+    padding: 0 17px;
     border: 1px solid rgba(249, 252, 253, 0.24);
     background-color: #deedc6;
-    margin: 31px 0 0 7px;
+    margin: 15px 0 0 7px;
+  }
+  &__sign-up {
+    height: 0;
+    background-color: #009fe3;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    width: 100%;
+    transition: .3s;
+    overflow: hidden;
   }
 }
 
+//Past section
+.past {
+  background: #f1f7fc;
+  padding: 35px 0 45px;
+}
+
 .webinar {
+  margin-top: 30px;
+
   &__inner {
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 200px;
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      height: 60px;
+      width: 60px;
+      background: $white;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      margin-top: -55px;
+      left: 50%;
+      margin-left: -30px;
+      z-index: 10;
+    }
+    &::after {
+      height: 0;
+      width: 0;
+      border-radius: 0;
+      border: 6px solid transparent;
+      border-left: 8px solid $black;
+      margin-top: -31px;
+      margin-left: -2px;
+    }
+  }
+  &__bg {
+    z-index: 0;
   }
   &__date {
+    height: 50px;
+    background-color: #0d2c39;
+    color: $white;
+    font-size: 14px;
+    opacity: 0.48;
+    width: 100%;
+    display: flex;
+    align-items: center;
     & > svg {
       height: 24px;
       width: 24px;
       fill: $white;
       opacity: .5;
+      margin-left: 15px;
+    }
+    & > span {
+      margin-left: 7px;
+    }
+  }
+  &__description {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22px;
+    color: $black;
+    margin-top: 15px;
+  }
+}
+
+//Tablet version
+@media (min-width: 768px) {
+  .signboard {
+    &__date {
+      margin: 31px 0 0 34px;
+    }
+    &__time {
+      margin-top: 31px;
+    }
+  }
+}
+
+//Medium desktops version
+@media (min-width: 1410px) {
+  //Global
+  .title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49.86px;
+  }
+  .subtitle {
+    font-size: 33px;
+    line-height: 48px;
+  }
+
+  //Webinars section
+  .webinars {
+    height: 195px;
+    padding-top: 105px;
+  }
+
+  //Next section
+  .next {
+    padding: 80px 0 95px;
+    &__description {
+      margin-top: 55px;
+    }
+    &__text {
+      margin-top: 30px;
+    }
+  }
+
+  //Past section
+  .past {
+    padding: 70px 0 30px;
+    &__webinar {
+      margin-bottom: 60px;
     }
   }
 }
