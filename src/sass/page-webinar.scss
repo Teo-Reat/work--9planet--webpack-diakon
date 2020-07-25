@@ -1,4 +1,12 @@
 //Global
+//Title section
+.webinars,
+.lk {
+  position: relative;
+  height: 100px;
+  padding-top: 50px;
+}
+
 .title {
   font-size: 28px;
   font-weight: 700;
@@ -24,13 +32,6 @@
     object-fit: cover;
     object-position: center;
   }
-}
-
-//Prime section
-.webinars {
-  position: relative;
-  height: 100px;
-  padding-top: 50px;
 }
 
 //Next section
@@ -224,6 +225,14 @@
 //Medium desktops version
 @media (min-width: 1410px) {
   //Global
+
+  //Title section
+  .webinars,
+  .lk {
+    height: 195px;
+    padding-top: 105px;
+  }
+
   .title {
     font-size: 40px;
     font-weight: 700;
@@ -232,12 +241,6 @@
   .subtitle {
     font-size: 33px;
     line-height: 48px;
-  }
-
-  //Webinars section
-  .webinars {
-    height: 195px;
-    padding-top: 105px;
   }
 
   //Next section

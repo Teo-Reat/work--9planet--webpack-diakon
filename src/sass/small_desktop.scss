@@ -158,7 +158,7 @@
       transition: .3s;
 
       & .products__item {
-        min-width: unset;
+        min-width: auto;
 
         &__image {
           & > svg {

@@ -57,7 +57,7 @@
       & .products__item {
         text-align: left;
         margin-top: 30px;
-        min-width: unset;
+        min-width: auto;
 
         & a {
           display: flex;
@@ -213,14 +213,14 @@
           top: 0;
           left: 0;
           width: 100%;
-          height: unset;
+          height: auto;
           visibility: hidden;
           opacity: 0;
         }
       }
 
       & .products__item {
-        min-width: unset;
+        min-width: auto;
         &__description {
           font-size: 16px;
         }
@@ -247,7 +247,7 @@
         &__item {
           margin: 0;
           &:hover .navigation__products__wrapper {
-            width: unset;
+            width: auto;
           }
 
           &__wrapper {

@@ -1,0 +1,274 @@
+//Personal account menu
+.lk {
+  &__wrapper {
+    margin-top: 45px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__menu {
+    padding: 0 10px 25px;
+    border: 1px solid #d1e1e8;
+    width: 100%;
+    &--bold {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #d1e1e8;
+    }
+    &-item {
+      &--bold {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        color: $black;
+        margin-top: 30px;
+        display: block;
+      }
+
+      &--thin {
+        font-size: 16px;
+        line-height: 25px;
+        color: $black;
+        margin-top: 15px;
+        display: block;
+      }
+    }
+    &-list-item {
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        left: 0;
+        right: 0;
+        background: #d1e1e8;
+        bottom: -8px;
+      }
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+  &__subtitle {
+    margin-top: 20px;
+  }
+  &__personal {
+    padding: 0 10px 25px;
+    border: 1px solid #d1e1e8;
+    margin-top: 10px;
+    &-category {
+      opacity: 0.8;
+      color: #1d1d1d;
+      font-size: 14px;
+      letter-spacing: 0.35px;
+      margin-top: 20px;
+    }
+    &-value {
+      font-size: 16px;
+      letter-spacing: 0.4px;
+      margin-top: 7px;
+    }
+  }
+  &__edit {
+    margin-top: 30px;
+    &-button {
+      width: 100%;
+      padding: 15px 60px;
+      border: 1px solid #219bd8;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.28px;
+    }
+  }
+  &__discount {
+    background-color: #eaf2f8;
+    margin-top: 10px;
+    padding: 25px 40px 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-category {
+      color: #5d707e;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    &-value {
+      font-size: 35px;
+      font-weight: 300;
+    }
+  }
+  &__contract {
+    background-color: #eaf2f8;
+    margin-top: 10px;
+    padding: 28px 40px 32px 30px;
+    &-category {
+      color: #5d707e;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    &-description {
+      font-size: 16px;
+      margin-top: 15px;
+    }
+    &-details {
+      margin-top: 10px;
+    }
+    &-exp {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+    &-exp-time {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+    &-specification {
+      color: #5c5c5c;
+      font-size: 12px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+    &-download {
+      color: #337ba7;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.26px;
+      margin-left: auto;
+      display: inline-block;
+      &-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  &__manager {
+    background-color: #eaf2f8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 28px 40px 32px 30px;
+    &-title {
+      color: #5d707e;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    &-name {
+      font-size: 22px;
+      margin-top: 20px;
+    }
+    &-function {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    &-email {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    &-phone {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+}
+
+//Tablet version
+@media (min-width: 768px) {
+  .lk {
+    &__wrapper {
+      margin-top: 45px;
+      margin-bottom: 45px;
+    }
+    &__inner {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    &__menu {
+      padding: 20px 30px 50px 34px;
+      width: 55%;
+    }
+    &__content {
+      width: 40%;
+      margin-left: 30px;
+    }
+    &__subtitle {
+      margin-top: 0;
+    }
+    &__personal {
+      padding: 26px 30px 50px 34px;
+    }
+    &__discount {
+      margin-top: 28px;
+    }
+    &__contract {
+      margin-top: 26px;
+    }
+    &-details {
+      margin-top: 13px;
+    }
+    &__manager {
+      margin-top: 16px;
+    }
+  }
+}
+
+//Small desktops version
+@media (min-width: 1024px) {
+  .lk {
+    &__menu {
+      width: 372px;
+    }
+    &__content {
+      width: 570px;
+    }
+    &__discount {
+      padding-right: 83px;
+    }
+    &__contract {
+      &-details {
+        display: flex;
+        margin-top: 15px;
+      }
+      &-exp {
+        margin-right: 5px;
+      }
+      &-exp-time {
+        margin-right: auto;
+      }
+      &-download-wrapper {
+        margin-left: auto;
+        align-items: center;
+      }
+      &-download {
+        margin-left: 5px;
+      }
+    }
+    &__manager {
+      &-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+      &-inner {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      &-name {
+        margin-top: 0;
+      }
+      &-email {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+//Medium desktops version
+@media (min-width: 1410px) {
+  .lk {
+    &__wrapper {
+      margin-top: 90px;
+      margin-bottom: 90px;
+    }
+  }
+}

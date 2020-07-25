@@ -17,16 +17,16 @@ module.exports = merge(common, {
 		minimizer: [
 			new OptimizeCssAssetsPlugin(),
 			new TerserPlugin(),
-			new HtmlWebpackPlugin({
-				template: "./src/template.html",
-				inject: true,
-				chunks: ['style'],
-				minify: {
-					removeAttributeQuotes: true,
-					collapseWhitespace: true,
-					removeComments: true
-				}
-			}),
+			// new HtmlWebpackPlugin({
+			// 	template: "./src/template.html",
+			// 	inject: true,
+			// 	chunks: ['style'],
+			// 	minify: {
+			// 		removeAttributeQuotes: true,
+			// 		collapseWhitespace: true,
+			// 		removeComments: true
+			// 	}
+			// }),
 			// new HtmlWebpackPlugin({
 			// 	template: "./src/pages/webinar.html",
 			// 	filename: 'webinar.html',
@@ -38,6 +38,17 @@ module.exports = merge(common, {
 			// 		removeComments: true
 			// 	}
 			// }),
+			new HtmlWebpackPlugin({
+				template: "./src/pages/lk-personal.html",
+				filename: 'webinar.html',
+				inject: true,
+				chunks: ['style'],
+				minify: {
+					removeAttributeQuotes: true,
+					collapseWhitespace: true,
+					removeComments: true
+				}
+			}),
 		]
 	},
 	plugins: [

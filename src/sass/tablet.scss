@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
   //Global
   body {
-    height: 100%;
+    //height: ;
   }
 
   //Header
@@ -88,7 +88,7 @@
     &__search-language__wrapper {
       flex-direction: column-reverse;
       margin-bottom: 20px;
-      margin-right: unset;
+      margin-right: auto;
     }
 
     &__search {
@@ -340,7 +340,7 @@
       &__item {
         font-size: 12px;
         font-weight: 700;
-        height: unset;
+        height: auto;
         min-height: 430px;
       }
     }
