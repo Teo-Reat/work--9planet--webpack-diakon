@@ -1,0 +1,188 @@
+//Instructions
+.instructions {
+  margin: 10px 0 20px;
+  & button {
+    text-align: left;
+    padding-right: 35px;
+    position: relative;
+  }
+  & li {
+    position: relative;
+  }
+  & svg {
+    position: absolute;
+    top: 20px;
+    right: 8px;
+    height: 18px;
+    width: 18px;
+    transition: .3s;
+  }
+  border: 1px solid #d1e1e8;
+  &__first-floor {
+    &-item {
+      //border-bottom: 1px solid #d1e1e8;
+    }
+    &-button {
+      font-size: 14px;
+      font-weight: 700;
+      height: 60px;
+      width: 100%;
+      border-bottom: 1px solid #d1e1e8;
+      padding-left: 5px;
+      background-color: #eaf2f8;
+    }
+  }
+  &__second-floor {
+    display: none;
+    &-button {
+      font-size: 16px;
+      font-weight: 600;
+      height: 60px;
+      width: 100%;
+      border-bottom: 1px solid #d1e1e8;
+      padding-left: 5px;
+    }
+  }
+  &__third-floor {
+    display: none;
+    &-button {
+      font-size: 15px;
+      font-weight: 600;
+      height: 60px;
+      width: 100%;
+      border-bottom: 1px solid #d1e1e8;
+      padding-left: 42px;
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        background: #219bd8;
+        height: 1px;
+        width: 19px;
+        top: 29px;
+        left: 6px;
+      }
+    }
+  }
+  &__fourth-floor {
+    display: none;
+    &-button {
+      font-size: 13px;
+      font-weight: 600;
+      height: 60px;
+      width: 100%;
+      border-bottom: 1px solid #d1e1e8;
+      padding-left: 70px;
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        background: #219bd8;
+        height: 1px;
+        width: 19px;
+        top: 29px;
+        left: 34px;
+      }
+    }
+  }
+  &__fifth-floor {
+    display: none;
+    &-item {
+      border-bottom: 1px solid #d1e1e8;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 10px 0 5px;
+      justify-content: space-between;
+    }
+  }
+  &__title {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  &__download {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.26px;
+    color: #219bd8;
+  }
+}
+
+.reagents {
+  &__menu {
+    &--active {
+      & > svg {
+        transform: rotate(-180deg);
+        //transition: .3s;
+      }
+    }
+  }
+}
+
+//Tablet version
+@media (min-width: 768px) {}
+
+//Small desktops version
+@media (min-width: 1024px) {
+  .instructions {
+    & svg {
+      right: 20px;
+      top: 31px;
+    }
+    &__first-floor {
+      &-button {
+        padding-left: 31px;
+        font-size: 20px;
+        height: 80px;
+      }
+    }
+    &__second-floor {
+      &-button {
+        padding-left: 31px;
+        font-size: 22px;
+        height: 80px;
+      }
+    }
+    &__third-floor {
+      &-button {
+        font-size: 18px;
+        padding-left: 84px;
+        height: 80px;
+        &::before {
+          width: 38px;
+          top: 39px;
+          left: 34px;
+        }
+      }
+    }
+    &__fourth-floor {
+      &-button {
+        font-size: 16px;
+        padding-left: 140px;
+        height: 80px;
+        &::before {
+          width: 38px;
+          top: 39px;
+          left: 87px;
+        }
+      }
+    }
+    &__fifth-floor {
+      &-item {
+        height: 80px;
+        padding: 0 30px 0 31px;
+      }
+    }
+    &__title {
+      font-size: 15px;
+    }
+    &__download {
+      font-size: 13px;
+    }
+  }
+}
+
+//Medium desktops version
+@media (min-width: 1410px) {
+
+}

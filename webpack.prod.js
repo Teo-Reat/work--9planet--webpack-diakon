@@ -38,8 +38,19 @@ module.exports = merge(common, {
 			// 		removeComments: true
 			// 	}
 			// }),
+			// new HtmlWebpackPlugin({
+			// 	template: "./src/pages/lk-personal.html",
+			// 	filename: 'webinar.html',
+			// 	inject: true,
+			// 	chunks: ['style'],
+			// 	minify: {
+			// 		removeAttributeQuotes: true,
+			// 		collapseWhitespace: true,
+			// 		removeComments: true
+			// 	}
+			// }),
 			new HtmlWebpackPlugin({
-				template: "./src/pages/lk-personal.html",
+				template: "./src/pages/lk-instructions.html",
 				filename: 'webinar.html',
 				inject: true,
 				chunks: ['style'],

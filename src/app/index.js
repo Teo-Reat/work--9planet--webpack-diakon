@@ -125,6 +125,27 @@ $(document).ready(() => {
 		$('.js-mobile__products').toggleClass('mobile__menu__item_active')
 	})
 
+	//LK instructions ladder
+	$('.js-reagents__first-floor-button').click(() => {
+		$('.js-reagents__first-floor-button').toggleClass('reagents__menu--active')
+		$('.js-reagents__second-floor').slideToggle()
+	})
+
+	$('.js-reagents__second-floor-button').click(() => {
+		$('.js-reagents__second-floor-button').toggleClass('reagents__menu--active')
+		$('.js-reagents__third-floor').slideToggle()
+	})
+
+	$('.js-reagents__third-floor-button').click(() => {
+		$('.js-reagents__third-floor-button').toggleClass('reagents__menu--active')
+		$('.js-reagents__fourth-floor').slideToggle()
+	})
+
+	$('.js-reagents__fourth-floor-button').click(() => {
+		$('.js-reagents__fourth-floor-button').toggleClass('reagents__menu--active')
+		$('.js-reagents__fifth-floor').slideToggle()
+	})
+
 
 	//Yandex map
 	$(function () {

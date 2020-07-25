@@ -16,8 +16,11 @@ module.exports = merge(common, {
 		// new HtmlWebpackPlugin({
 		// 	template: "./src/template.html"
 		// }),
+		// new HtmlWebpackPlugin({
+		// 	template: "./src/pages/lk-personal.html"
+		// }),
 		new HtmlWebpackPlugin({
-			template: "./src/pages/lk-personal.html"
+			template: "./src/pages/lk-instructions.html"
 		}),
 	],
 	module: {
