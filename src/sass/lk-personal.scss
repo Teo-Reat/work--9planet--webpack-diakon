@@ -17,24 +17,39 @@
     }
     &-item {
       &--bold {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         line-height: 24px;
         color: $black;
         margin-top: 30px;
         display: block;
+        position: relative;
+        padding-left: 32px;
+        & > svg {
+          height: 24px;
+          width: 24px;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
       }
 
       &--thin {
         font-size: 16px;
         line-height: 25px;
         color: $black;
-        margin-top: 15px;
+        margin-top: 25px;
         display: block;
+        &:first-child {
+          //margin-top: 0;
+        }
       }
     }
     &-list-item {
       position: relative;
+      &:first-child .lk__menu-item--thin {
+        margin-top: 12px;
+      }
       &::after {
         content: '';
         display: block;
@@ -43,7 +58,7 @@
         left: 0;
         right: 0;
         background: #d1e1e8;
-        bottom: -8px;
+        bottom: -13px;
       }
       &:last-child::after {
         display: none;
@@ -127,6 +142,7 @@
       font-size: 12px;
       text-transform: uppercase;
       display: inline-block;
+      position: relative;
     }
     &-download {
       color: #337ba7;
@@ -135,9 +151,20 @@
       letter-spacing: 0.26px;
       margin-left: auto;
       display: inline-block;
+      position: relative;
       &-wrapper {
         display: flex;
         justify-content: space-between;
+        margin-top: 10px;
+        & svg {
+          position: absolute;
+          height: 18px;
+          width: 18px;
+          fill: #337ba7;
+          top: -2px;
+          left: 0;
+          display: none;
+        }
       }
     }
   }
@@ -146,6 +173,9 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 28px 40px 32px 30px;
+    & svg {
+      display: none;
+    }
     &-title {
       color: #5d707e;
       font-size: 16px;
@@ -215,7 +245,25 @@
 @media (min-width: 1024px) {
   .lk {
     &__menu {
-      width: 372px;
+      width: auto;
+      &-item {
+        &--bold {
+          font-size: 18px;
+          font-weight: 600;
+          padding-left: 43px;
+        }
+
+        &--thin {
+          font-size: 16px;
+          line-height: 25px;
+          color: $black;
+          margin-top: 25px;
+          display: block;
+          &:first-child {
+            //margin-top: 0;
+          }
+        }
+      }
     }
     &__content {
       width: 570px;
@@ -237,12 +285,28 @@
       &-download-wrapper {
         margin-left: auto;
         align-items: center;
+        margin-top: 0;
+        & svg {
+          display: block;
+        }
       }
       &-download {
-        margin-left: 5px;
+        padding-left: 24px;
+        margin-left: 24px;
+      }
+      &-specification {
+        padding-left: 20px;
+        & > svg {
+          top: -2px;
+          height: 16px;
+          width: 16px;
+        }
       }
     }
     &__manager {
+      & svg {
+        display: block;
+      }
       &-wrapper {
         display: flex;
         justify-content: space-between;
@@ -252,12 +316,26 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        & svg {
+          height: 18px;
+          width: 18px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          fill: #727172;
+        }
       }
       &-name {
         margin-top: 0;
       }
       &-email {
         margin-top: 0;
+        position: relative;
+        padding-left: 26px;
+      }
+      &-phone {
+        position: relative;
+        padding-left: 26px;
       }
     }
   }
