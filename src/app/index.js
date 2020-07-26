@@ -95,6 +95,7 @@ $(document).ready(() => {
 
 	//Styles for "select" tag
 	$('.js-network__select').niceSelect()
+	$('.js-dealer__select').niceSelect()
 
 	// Navigation products submenu
 	let navigationSubMenu = $('.navigation__products__wrapper');

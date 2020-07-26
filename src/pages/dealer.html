@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный кабинет</title>
+    <title>Дилеры</title>
 
     <!--    Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -1149,91 +1149,110 @@
 
 <!--Main-->
 <main class="main">
-    <section class="lk">
+    <section class="dealer">
         <div class="container">
             <div class="pages__bg background">
                 <img src="../assets/images/webinar-bg.jpg" alt="">
             </div>
-            <h1 class="lk__title title">Личный кабинет</h1>
+            <h1 class="dealer__title title">Дилеры</h1>
         </div>
     </section>
-    <section class="lk__wrapper">
-        <div class="lk__inner container">
-            <div class="lk__menu">
-                <div class="lk__menu--bold">
-                    <a class="lk__menu-item--bold" href="#">
-                        <svg class="icon icon-user">
-                            <use xlink:href="#icon-user"></use>
-                        </svg>
-                        <span>Персональные данные</span>
-                    </a>
-                    <a class="lk__menu-item--bold" href="#">
-                        <svg class="icon icon-document">
-                            <use xlink:href="#icon-document"></use>
-                        </svg>
-                        <span>Сертификаты пользователя </span>
-                    </a>
-                    <a class="lk__menu-item--bold" href="#">
-                        <svg class="icon icon-mail1"><use xlink:href="#icon-mail1"></use></svg>
-                        <span>Заявка на рекламацию </span>
-                    </a>
-                </div>
-                <ul class="lk__menu--thin lk__menu-list">
-                    <li class="lk__menu-list-item">
-                        <a class="lk__menu-item--thin" href="#">РУ, Сертификаты</a>
-                    </li>
-                    <li class="lk__menu-list-item">
-                        <a class="lk__menu-item--thin" href="#">Паспорта качества</a>
-                    </li>
-                    <li class="lk__menu-list-item">
-                        <a class="lk__menu-item--thin" href="#">Технические описания продукции</a>
-                    </li>
-                    <li class="lk__menu-list-item">
-                        <a class="lk__menu-item--thin" href="#">Инструкции на продукцию</a>
-                    </li>
-                    <li class="lk__menu-list-item">
-                        <a class="lk__menu-item--thin" href="#">Адаптации наборов реагентов</a>
-                    </li>
-                    <li class="lk__menu-list-item">
-                        <a class="lk__menu-item--thin" href="#">Рекламные материалы для скачивания</a>
-                    </li>
-                    <li class="lk__menu-list-item">
-                        <a class="lk__menu-item--thin" href="#">Прайс-листы</a>
-                    </li>
-                </ul>
+    <section class="dealer__select-block">
+        <div class="container">
+            <div class="dealer__select-wrapper">
+                <label class="dealer__select-label" for="dealer__select"></label>
+                <select name="network" id="dealer__select" class="js-dealer__select wide dealer__select">
+                    <option value="1">Москва</option>
+                    <option value="2">Вологда</option>
+                    <option value="3">Харьков</option>
+                    <option value="4">Саранск</option>
+                    <option value="5">Самара</option>
+                </select>
             </div>
-            <div class="lk__content">
-                <h2 class="lk__subtitle subtitle">Персональные данные</h2>
-                <div class="lk__refresh">
-                    <div class="refresh--last">Дата обновления: 09.10.2018 16:11:38</div>
-                    <div class="refresh--auth">Последняя авторизация: 09.10.2018 16:11:38</div>
-                </div>
-                <form class="lk__form form" action="#">
-                    <label>ФИО
-                        <input class="form__name form__input" type="text" name="name">
-                    </label>
-                    <label>Организация
-                        <input class="form__organization form__input" type="text" name="organization">
-                    </label>
-                    <label>E-mail
-                        <input class="form__email form__input form__input--alert" type="email" name="email">
-                    </label>
-                    <label>Телефон
-                        <input class="form__phone form__input" type="text" name="phone">
-                    </label>
-                    <label>Новый пароль
-                        <input class="form__password form__input" type="password" name="password">
-                    </label>
-                    <label>Повторите новый пароль
-                        <input class="form__repeat form__input" type="password" name="repeat">
-                    </label>
-                    <button class="form__submit" type="submit">Сохранить</button>
-                </form>
-            </div>
+        </div>
+    </section>
+    <section class="dealer__map">
+        <div id="map" class="network__map"></div>
+    </section>
+    <section class="table-section">
+        <div class="container">
+            <table class="dealer__table">
+                <tr class="dealer__table-row">
+                    <td class="dealer__table-col">
+                        <div class="dealer__table-title">Фармавлад</div>
+                        <span class="dealer__table-address">г. Воронеж, ул.Правды, дом 26, офис 2</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-tel"><use xlink:href="#icon-tel"></use></svg>
+                        <span class="dealer__table-phone">+7 (960) 138 89 76</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
+                        <span class="dealer__table-email">voronezh@farm.ru</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-time"><use xlink:href="#icon-time"></use></svg>
+                        <span class="dealer__table-work">Пн-Пт 9:00-18:00</span>
+                    </td>
+                </tr>
+                <tr class="dealer__table-row">
+                    <td class="dealer__table-col">
+                        <div class="dealer__table-title">Фармавлад</div>
+                        <span class="dealer__table-address">г. Воронеж, ул.Правды, дом 26, офис 2</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-tel"><use xlink:href="#icon-tel"></use></svg>
+                        <span class="dealer__table-phone">+7 (960) 138 89 76</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
+                        <span class="dealer__table-email">voronezh@farm.ru</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-time"><use xlink:href="#icon-time"></use></svg>
+                        <span class="dealer__table-work">Пн-Пт 9:00-18:00</span>
+                    </td>
+                </tr>
+                <tr class="dealer__table-row">
+                    <td class="dealer__table-col">
+                        <div class="dealer__table-title">Фармавлад</div>
+                        <span class="dealer__table-address">г. Воронеж, ул.Правды, дом 26, офис 2</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-tel"><use xlink:href="#icon-tel"></use></svg>
+                        <span class="dealer__table-phone">+7 (960) 138 89 76</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
+                        <span class="dealer__table-email">voronezh@farm.ru</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-time"><use xlink:href="#icon-time"></use></svg>
+                        <span class="dealer__table-work">Пн-Пт 9:00-18:00</span>
+                    </td>
+                </tr>
+                <tr class="dealer__table-row">
+                    <td class="dealer__table-col">
+                        <div class="dealer__table-title">Фармавлад</div>
+                        <span class="dealer__table-address">г. Воронеж, ул.Правды, дом 26, офис 2</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-tel"><use xlink:href="#icon-tel"></use></svg>
+                        <span class="dealer__table-phone">+7 (960) 138 89 76</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
+                        <span class="dealer__table-email">voronezh@farm.ru</span>
+                    </td>
+                    <td class="dealer__table-col">
+                        <svg class="icon icon-time"><use xlink:href="#icon-time"></use></svg>
+                        <span class="dealer__table-work">Пн-Пт 9:00-18:00</span>
+                    </td>
+                </tr>
+            </table>
         </div>
     </section>
 </main>
-
 
 <!--Footer-->
 <footer class="footer">
@@ -1374,5 +1393,8 @@
         <button type="button" class="search__results__button">Показать все результаты</button>
     </div>
 </section>
+
+<!--Scripts-->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </body>
 </html>

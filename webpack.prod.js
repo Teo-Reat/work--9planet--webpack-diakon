@@ -39,9 +39,13 @@ module.exports = merge(common, {
 			// 	template: "./src/pages/lk-instructions.html",
 			// 	filename: 'lk-instructions.html',
 			// }),
+			// new HtmlWebpackPlugin({
+			// 	template: "./src/pages/lk-form.html",
+			// 	filename: 'lk-form.html',
+			// }),
 			new HtmlWebpackPlugin({
-				template: "./src/pages/lk-form.html",
-				filename: 'lk-form.html',
+				template: "./src/pages/dealer.html",
+				filename: 'dealer.html',
 			}),
 		]
 	},
